@@ -1,0 +1,391 @@
+==========================================
+COMPLETE S: DRIVE AUDIT
+==========================================
+
+📊 S: DRIVE ROOT (/mnt/scratch/)
+-----------------------------------
+$RECYCLE.BIN: 1010M (17692 files)
+04_Core_Infrastructure: 67G (2721 files)
+System Volume Information: 0 (0 files)
+WSL: 28G (45788 files)
+_archive: 6.7G (68270 files)
+models: 17G (7 files)
+projects: 9.5G (105865 files)
+vault: 0 (1 files)
+venv: 1.4G (53124 files)
+
+📁 PROJECTS FOLDER - COMPLETE INVENTORY
+-----------------------------------
+
+Root level items:
+-rw-r--r-- 1 evo evo 1086 Jan 13 15:56 .gemini.md
+drwxr-xr-x 1 evo evo 4096 Jan 26 20:52 .npm-global
+drwxr-xr-x 1 evo evo 4096 Jan 27 18:35 00_DNA
+drwxr-xr-x 1 evo evo 4096 Jan 27 18:11 01_Platform
+drwxr-xr-x 1 evo evo 4096 Jan 27 18:11 02_Content_Factory
+drwxr-xr-x 1 evo evo 4096 Jan 27 17:59 03_Tools
+drwxr-xr-x 1 evo evo 4096 Jan 27 18:09 04_Intelligence
+drwxr-xr-x 1 evo evo 4096 Jan 27 17:59 05_Archive
+drwxr-xr-x 1 evo evo 4096 Jan 27 16:55 _scratch
+lrwxrwxrwx 1 evo evo    3 Jan 27 08:37 lib64 -> lib
+
+
+==========================================
+00_DNA - COMPLETE CONTENTS
+==========================================
+.
+./brand-identity
+./brand-identity/visual
+./build-philosophy
+./system-prompts
+./workflows
+
+Stats:
+  Total items: 35
+  Directories: 6
+  Files: 29
+  Symlinks: 0
+  Size: 232K
+
+==========================================
+01_Platform - COMPLETE CONTENTS
+==========================================
+.
+
+Stats:
+  Total items: 3
+  Directories: 1
+  Files: 1
+  Symlinks: 0
+  Size: 0
+
+==========================================
+02_Content_Factory - COMPLETE CONTENTS
+==========================================
+.
+./comfyui
+./comfyui-main
+./comfyui-main/.ci
+./comfyui-main/.ci/update_windows
+./comfyui-main/.ci/windows_amd_base_files
+./comfyui-main/.ci/windows_nightly_base_files
+./comfyui-main/.ci/windows_nvidia_base_files
+./comfyui-main/.git
+./comfyui-main/.git/branches
+./comfyui-main/.git/hooks
+./comfyui-main/.git/info
+./comfyui-main/.git/logs
+./comfyui-main/.git/objects
+./comfyui-main/.git/refs
+./comfyui-main/.github
+./comfyui-main/.github/ISSUE_TEMPLATE
+./comfyui-main/.github/PULL_REQUEST_TEMPLATE
+./comfyui-main/.github/workflows
+./comfyui-main/comfy
+./comfyui-main/comfy/__pycache__
+./comfyui-main/comfy/audio_encoders
+./comfyui-main/comfy/cldm
+./comfyui-main/comfy/comfy_types
+./comfyui-main/comfy/extra_samplers
+./comfyui-main/comfy/image_encoders
+./comfyui-main/comfy/k_diffusion
+./comfyui-main/comfy/ldm
+./comfyui-main/comfy/sd1_tokenizer
+./comfyui-main/comfy/t2i_adapter
+./comfyui-main/comfy/taesd
+./comfyui-main/comfy/text_encoders
+./comfyui-main/comfy/weight_adapter
+./comfyui-main/comfy_api
+./comfyui-main/comfy_api/__pycache__
+./comfyui-main/comfy_api/input
+./comfyui-main/comfy_api/input_impl
+./comfyui-main/comfy_api/internal
+./comfyui-main/comfy_api/latest
+./comfyui-main/comfy_api/torch_helpers
+./comfyui-main/comfy_api/util
+./comfyui-main/comfy_api/v0_0_1
+./comfyui-main/comfy_api/v0_0_2
+./comfyui-main/comfy_api_nodes
+./comfyui-main/comfy_api_nodes/__pycache__
+./comfyui-main/comfy_api_nodes/apis
+./comfyui-main/comfy_api_nodes/util
+./comfyui-main/comfy_config
+./comfyui-main/comfy_config/__pycache__
+./comfyui-main/comfy_execution
+./comfyui-main/comfy_execution/__pycache__
+./comfyui-main/comfy_extras
+./comfyui-main/comfy_extras/__pycache__
+./comfyui-main/comfy_extras/chainner_models
+./comfyui-main/custom_nodes
+./comfyui-main/custom_nodes/ComfyUI-Frame-Interpolation
+./comfyui-main/custom_nodes/ComfyUI-Impact-Pack
+./comfyui-main/custom_nodes/ComfyUI-VideoHelperSuite
+./comfyui-main/custom_nodes/ComfyUI-WanVideoWrapper
+./comfyui-main/custom_nodes/__pycache__
+./comfyui-main/input
+./comfyui-main/input/3d
+./comfyui-main/output
+./comfyui-main/user
+./comfyui-main/user/default
+./comfyui-main/venv
+./comfyui-main/venv/bin
+./comfyui-main/venv/include
+./comfyui-main/venv/lib
+./comfyui-main/venv/share
+./output
+./pipeline
+./pipeline/.git
+./pipeline/.git/branches
+./pipeline/.git/hooks
+./pipeline/.git/info
+./pipeline/.git/logs
+./pipeline/.git/objects
+./pipeline/.git/refs
+./templates
+./workflows
+
+Stats:
+  Total items: 59598
+  Directories: 6163
+  Files: 53431
+  Symlinks: 4
+  Size: 7.8G
+  Git repos: 6
+comfyui-main
+comfyui-main/custom_nodes/ComfyUI-Frame-Interpolation
+comfyui-main/custom_nodes/ComfyUI-Impact-Pack
+comfyui-main/custom_nodes/ComfyUI-VideoHelperSuite
+comfyui-main/custom_nodes/ComfyUI-WanVideoWrapper
+pipeline
+  ⚠️  Empty folders: 25
+comfyui
+comfyui-main/.git/branches
+comfyui-main/.git/objects/info
+comfyui-main/.git/refs/tags
+comfyui-main/custom_nodes/ComfyUI-Frame-Interpolation/.git/branches
+comfyui-main/custom_nodes/ComfyUI-Frame-Interpolation/.git/objects/info
+comfyui-main/custom_nodes/ComfyUI-Frame-Interpolation/.git/refs/tags
+comfyui-main/custom_nodes/ComfyUI-Impact-Pack/.git/branches
+comfyui-main/custom_nodes/ComfyUI-Impact-Pack/.git/objects/info
+comfyui-main/custom_nodes/ComfyUI-Impact-Pack/.git/refs/tags
+comfyui-main/custom_nodes/ComfyUI-VideoHelperSuite/.git/branches
+comfyui-main/custom_nodes/ComfyUI-VideoHelperSuite/.git/objects/info
+comfyui-main/custom_nodes/ComfyUI-VideoHelperSuite/.git/refs/tags
+comfyui-main/custom_nodes/ComfyUI-WanVideoWrapper/.git/branches
+comfyui-main/custom_nodes/ComfyUI-WanVideoWrapper/.git/objects/info
+comfyui-main/custom_nodes/ComfyUI-WanVideoWrapper/.git/refs/tags
+comfyui-main/input/3d
+comfyui-main/user/default
+comfyui-main/venv/include/python3.12
+output
+pipeline/.git/branches
+pipeline/.git/objects/info
+pipeline/.git/refs/tags
+templates
+workflows
+
+==========================================
+03_Tools - COMPLETE CONTENTS
+==========================================
+.
+./automation
+./cli-tools
+./mcp-servers
+./mcp-servers/comfyui
+./mcp-servers/comfyui/src
+./mcp-servers/evolution-studio
+./mcp-servers/evolution-studio/.git
+./mcp-servers/gemini
+./mcp-servers/gemini/venv
+
+Stats:
+  Total items: 11178
+  Directories: 1499
+  Files: 9675
+  Symlinks: 4
+  Size: 130M
+  Git repos: 1
+mcp-servers/evolution-studio
+  ⚠️  Empty folders: 6
+automation
+cli-tools
+mcp-servers/evolution-studio/.git/branches
+mcp-servers/evolution-studio/.git/objects/info
+mcp-servers/evolution-studio/.git/refs/tags
+mcp-servers/gemini/venv/include/python3.12
+
+==========================================
+04_Intelligence - COMPLETE CONTENTS
+==========================================
+.
+./agent-configs
+./gemini-workspace
+./gemini-workspace/.adk
+./gemini-workspace/.adk/artifacts
+./gemini-workspace/.gemini
+./gemini-workspace/.git
+./gemini-workspace/.git/branches
+./gemini-workspace/.git/hooks
+./gemini-workspace/.git/info
+./gemini-workspace/.git/logs
+./gemini-workspace/.git/objects
+./gemini-workspace/.git/refs
+./gemini-workspace/.venv
+./gemini-workspace/.venv/bin
+./gemini-workspace/.venv/include
+./gemini-workspace/.venv/lib
+./gemini-workspace/__adk_agent_builder_assistant
+./gemini-workspace/__adk_agent_builder_assistant/.adk
+./gemini-workspace/cto_guru
+./gemini-workspace/cto_guru/.adk
+./gemini-workspace/cto_guru/__adk_agent_builder_assistant
+./gemini-workspace/cto_guru/__pycache__
+./gemini-workspace/cto_guru/tools
+./gemini-workspace/tools
+./gemini-workspace/tools/.adk
+./gemini-workspace/tools/__pycache__
+./knowledge-base
+./skills
+
+Stats:
+  Total items: 23649
+  Directories: 3078
+  Files: 20567
+  Symlinks: 4
+  Size: 857M
+  Git repos: 1
+gemini-workspace
+  ⚠️  Empty folders: 8
+agent-configs
+gemini-workspace/.adk/artifacts
+gemini-workspace/.git/branches
+gemini-workspace/.git/refs/tags
+gemini-workspace/.venv/include/python3.12
+gemini-workspace/cto_guru/.adk/artifacts
+knowledge-base
+skills
+
+==========================================
+05_Archive - COMPLETE CONTENTS
+==========================================
+.
+./_planning_archived
+./_planning_archived/evolution-content-factory
+./_planning_archived/evolution-content-factory/.git
+./_planning_archived/evolution-content-factory/templates
+./evolution-studio
+./evolution-studio/.git
+./evolution-studio/.git/branches
+./evolution-studio/.git/hooks
+./evolution-studio/.git/info
+./evolution-studio/.git/logs
+./evolution-studio/.git/objects
+./evolution-studio/.git/refs
+./evolution-studio/.venv
+./evolution-studio/.venv/bin
+./evolution-studio/.venv/etc
+./evolution-studio/.venv/include
+./evolution-studio/.venv/lib
+./evolution-studio/.venv/share
+./evolution-studio/__pycache__
+./evolution-studio/assets
+./evolution-studio/assets/templates
+./evolution-studio/content
+./evolution-studio/content/data
+./evolution-studio/content/scripts
+./evolution-studio/content/templates
+./evolution-studio/evolution_studio_web
+./evolution-studio/horse_profiles
+./evolution-studio/horse_profiles/migrations
+./evolution-studio/horse_repository
+./evolution-studio/horse_repository/migrations
+./evolution-studio/modules
+./evolution-studio/modules/__pycache__
+./evolution-studio/src
+./evolution-studio/src/evo_studio
+./evolution-studio/studio_content
+./evolution-studio/studio_content/migrations
+./evolution-studio/studio_leases
+./evolution-studio/studio_leases/migrations
+./evolution-studio/studio_leases/static
+./evolution-studio/studio_profiles
+./evolution-studio/studio_profiles/migrations
+
+Stats:
+  Total items: 25767
+  Directories: 3918
+  Files: 21844
+  Symlinks: 5
+  Size: 698M
+  Git repos: 2
+evolution-studio
+_planning_archived/evolution-content-factory
+  ⚠️  Empty folders: 11
+evolution-studio/.git/branches
+evolution-studio/.git/objects/info
+evolution-studio/.git/refs/tags
+evolution-studio/.venv/include/python3.12
+evolution-studio/content/data
+evolution-studio/content/scripts
+evolution-studio/content/templates
+_planning_archived/evolution-content-factory/.git/branches
+_planning_archived/evolution-content-factory/.git/objects/info
+_planning_archived/evolution-content-factory/.git/objects/pack
+_planning_archived/evolution-content-factory/.git/refs/tags
+
+==========================================
+LOOSE ITEMS IN ROOT
+==========================================
+
+==========================================
+DUPLICATE / CONFLICTING ITEMS
+==========================================
+
+ComfyUI variations:
+./02_Content_Factory/comfyui
+./02_Content_Factory/comfyui-main
+./02_Content_Factory/comfyui-main/comfy
+./02_Content_Factory/comfyui-main/comfy_api
+./02_Content_Factory/comfyui-main/comfy_api_nodes
+./02_Content_Factory/comfyui-main/comfy_config
+./02_Content_Factory/comfyui-main/comfy_execution
+./02_Content_Factory/comfyui-main/comfy_extras
+./03_Tools/mcp-servers/comfyui
+
+Evolution variations:
+./03_Tools/mcp-servers/evolution-studio
+./05_Archive/evolution-studio
+./05_Archive/evolution-studio/evolution_studio_web
+./05_Archive/_planning_archived/evolution-content-factory
+
+Asset/Content variations:
+./02_Content_Factory
+./02_Content_Factory/pipeline/harvest_assets.sh
+./05_Archive/evolution-studio/assets
+./05_Archive/evolution-studio/content
+./05_Archive/evolution-studio/studio_content
+./05_Archive/_planning_archived/evolution-content-factory
+
+==========================================
+REQUIRED MOVES
+==========================================
+
+✅ All repos are in correct locations
+
+==========================================
+SUMMARY
+==========================================
+
+S: Drive usage:
+  Total: 130G
+
+Projects folder:
+  Size: 9.5G
+  Numbered folders: 6/6
+  Loose items: 0
+
+Action required:
+  2. Populate 50 empty folders
+  3. Review S: drive root structure
+  4. Set up Obsidian in knowledge-base
+  5. Verify no duplicates exist
