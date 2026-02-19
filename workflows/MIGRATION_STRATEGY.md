@@ -18,7 +18,7 @@
 
 **Evolution-3.1 Refactor:**
 ```bash
-cd /mnt/scratch/projects/Evolution-3.1
+cd /home/evo/projects/Evolution-3.1
 git add -A
 git commit -m "Refactor: Consolidate into app/ directory structure"
 git push origin main
@@ -26,7 +26,7 @@ git push origin main
 
 **Evolution_Guru Gemini Work:**
 ```bash
-cd /mnt/scratch/projects/Evolution_Guru
+cd /home/evo/projects/Evolution_Guru
 
 # Option A: Commit everything
 git add -A
@@ -47,7 +47,7 @@ git push origin main
 **Rationale:** Keep Git repos in original locations, use symlinks for organization
 
 ```bash
-cd /mnt/scratch/projects/
+cd /home/evo/projects/
 
 # Create new structure folders
 mkdir -p 01_Platform
@@ -81,7 +81,7 @@ fi
 After migration, structure will look like:
 
 ```
-/mnt/scratch/projects/
+/home/evo/projects/
 ├── 00_DNA/                              ✅ Created
 │   ├── brand-identity/
 │   ├── build-philosophy/
@@ -138,7 +138,7 @@ If you prefer everything in new structure:
 
 **After committing all work:**
 ```bash
-cd /mnt/scratch/projects/
+cd /home/evo/projects/
 
 # Move everything into new structure
 mv Evolution-3.1 01_Platform/evolution-3.1

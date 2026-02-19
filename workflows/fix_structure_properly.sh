@@ -8,7 +8,7 @@ echo "FIXING STRUCTURE - Moving Repos Inside"
 echo "=========================================="
 echo ""
 
-BASE="/mnt/scratch/projects"
+BASE="/home/evo/projects"
 cd "$BASE" || exit 1
 
 echo "⚠️  WARNING: This will move Git repos into numbered folders"

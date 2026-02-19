@@ -4,7 +4,7 @@
 
 set -e  # Exit on error
 
-SCRIPT_DIR="/mnt/scratch/projects/00_DNA/workflows"
+SCRIPT_DIR="/home/evo/projects/00_DNA/workflows"
 cd "$SCRIPT_DIR" || exit 1
 
 echo "=========================================="
@@ -54,14 +54,14 @@ read -p "Choose option (A/B) or Skip (S): " -n 1 -r
 echo
 
 if [[ $REPLY =~ ^[Aa]$ ]]; then
-    cd /mnt/scratch/projects/Evolution_Guru
+    cd /home/evo/projects/Evolution_Guru
     git add -A
     git commit -m "Add Gemini CLI tools and CTO audit scripts"
     git push origin main
     echo "✅ Evolution_Guru committed (all files)"
     cd "$SCRIPT_DIR"
 elif [[ $REPLY =~ ^[Bb]$ ]]; then
-    cd /mnt/scratch/projects/Evolution_Guru
+    cd /home/evo/projects/Evolution_Guru
     echo "**/.adk/session.db" >> .gitignore
     git add .gitignore *.py .gemini/ 2>/dev/null || true
     git commit -m "Add Gemini tools, ignore ADK session databases"
@@ -79,7 +79,7 @@ echo "PHASE 3: Check Newly Cloned Repos"
 echo "=========================================="
 echo ""
 echo "Asset_Generation status:"
-cd /mnt/scratch/projects/Asset_Generation
+cd /home/evo/projects/Asset_Generation
 git status --short
 if [ -z "$(git status --porcelain)" ]; then
     echo "✅ Clean working directory"
@@ -89,7 +89,7 @@ fi
 echo ""
 
 echo "Evolution-Studio-MCP status:"
-cd /mnt/scratch/projects/Evolution-Studio-MCP
+cd /home/evo/projects/Evolution-Studio-MCP
 git status --short
 if [ -z "$(git status --porcelain)" ]; then
     echo "✅ Clean working directory"
@@ -139,7 +139,7 @@ echo "✅ All repos cloned"
 echo "✅ Active work committed"
 echo "✅ Full audit complete"
 echo ""
-echo "Final structure at: /mnt/scratch/projects/"
+echo "Final structure at: /home/evo/projects/"
 echo "  - 00_DNA/ (your standards)"
 echo "  - 01_Platform/ (Evolution-3.1)"
 echo "  - 02_Content_Factory/ (Asset_Generation)"

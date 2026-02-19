@@ -6,7 +6,7 @@ echo "=========================================="
 echo "Evolution_Guru - Gemini ADK Work Review"
 echo "=========================================="
 
-cd /mnt/scratch/projects/Evolution_Guru || exit 1
+cd /home/evo/projects/Evolution_Guru || exit 1
 
 echo ""
 echo "📊 Modified Files:"

@@ -8,7 +8,7 @@
 ## 🗂️ S: Drive Structure (Current)
 
 ```
-S:\ (or /mnt/scratch/)
+S:\ (or /home/evo/)
 ├── _archive/                    # Old archive folder
 ├── 04_Core_Infrastructure/      # What's in here?
 ├── models/                      # AI models (keep here)
@@ -23,7 +23,7 @@ S:\ (or /mnt/scratch/)
 
 ## 📋 Cleanup Actions Needed
 
-### In `/mnt/scratch/projects/`
+### In `/home/evo/projects/`
 
 **Keep as-is (working structure):**
 - ✅ `00_DNA/` through `05_Archive/`
@@ -34,7 +34,7 @@ S:\ (or /mnt/scratch/)
 
 1. **`.npm-global/`** 
    - Current: Root of projects
-   - Should be: System-level (leave at `/mnt/scratch/projects/.npm-global`)
+   - Should be: System-level (leave at `/home/evo/projects/.npm-global`)
    - Action: Keep here (needed for global npm packages)
 
 2. **`.planning/`**
@@ -48,7 +48,7 @@ S:\ (or /mnt/scratch/)
    - Action: Keep here (working as designed)
 
 4. **`brand_voice`** (symlink)
-   - Current: Symlink to `/mnt/scratch/vault/brand_voice`
+   - Current: Symlink to `/home/evo/vault/brand_voice`
    - Should be: Copy actual content into `00_DNA/brand-identity/`
    - Action: Extract and document in DNA
 
@@ -64,18 +64,18 @@ S:\ (or /mnt/scratch/)
 
 ```bash
 # Read the actual brand_voice content
-cat /mnt/scratch/vault/brand_voice > /mnt/scratch/projects/00_DNA/brand-identity/BRAND_VOICE_ORIGINAL.md
+cat /home/evo/vault/brand_voice > /home/evo/projects/00_DNA/brand-identity/BRAND_VOICE_ORIGINAL.md
 
 # Compare with what we created
-diff /mnt/scratch/projects/00_DNA/brand-identity/BRAND_VOICE.md \
-     /mnt/scratch/projects/00_DNA/brand-identity/BRAND_VOICE_ORIGINAL.md
+diff /home/evo/projects/00_DNA/brand-identity/BRAND_VOICE.md \
+     /home/evo/projects/00_DNA/brand-identity/BRAND_VOICE_ORIGINAL.md
 ```
 
 ### 2. Review .planning Folder
 
 ```bash
 # Check what's in .planning
-ls -la /mnt/scratch/projects/.planning/
+ls -la /home/evo/projects/.planning/
 
 # If useful: Move to DNA
 # If obsolete: Delete or archive
@@ -85,7 +85,7 @@ ls -la /mnt/scratch/projects/.planning/
 
 ```bash
 # Check what's in vault
-ls -la /mnt/scratch/vault/
+ls -la /home/evo/vault/
 
 # Should contain:
 # - Sensitive configs (.env backups)
@@ -98,7 +98,7 @@ ls -la /mnt/scratch/vault/
 
 ```bash
 # Check what's in there
-ls -la /mnt/scratch/04_Core_Infrastructure/
+ls -la /home/evo/04_Core_Infrastructure/
 
 # Determine if it should:
 # - Stay at S: root (infrastructure-level)
@@ -154,7 +154,7 @@ ls -la /mnt/scratch/04_Core_Infrastructure/
 ### Recommendation: Two-Tier Structure
 
 ```
-/mnt/scratch/                      # S: Drive Root
+/home/evo/                      # S: Drive Root
 │
 ├── infrastructure/                # Infrastructure-level (rename 04_Core_Infrastructure?)
 │   ├── networking/
@@ -187,29 +187,29 @@ ls -la /mnt/scratch/04_Core_Infrastructure/
 echo "=== Cleanup & Population ==="
 
 # 1. Extract brand voice
-if [ -f /mnt/scratch/vault/brand_voice ]; then
-    cp /mnt/scratch/vault/brand_voice \
-       /mnt/scratch/projects/00_DNA/brand-identity/BRAND_VOICE_ORIGINAL.md
+if [ -f /home/evo/vault/brand_voice ]; then
+    cp /home/evo/vault/brand_voice \
+       /home/evo/projects/00_DNA/brand-identity/BRAND_VOICE_ORIGINAL.md
     echo "✅ Extracted brand voice"
 fi
 
 # 2. Check .planning
-if [ -d /mnt/scratch/projects/.planning ]; then
+if [ -d /home/evo/projects/.planning ]; then
     echo "📁 .planning contents:"
-    ls -la /mnt/scratch/projects/.planning/
+    ls -la /home/evo/projects/.planning/
     echo "Review and decide: keep, move to DNA, or delete"
 fi
 
 # 3. Review 04_Core_Infrastructure
-if [ -d /mnt/scratch/04_Core_Infrastructure ]; then
+if [ -d /home/evo/04_Core_Infrastructure ]; then
     echo "📁 04_Core_Infrastructure contents:"
-    ls -la /mnt/scratch/04_Core_Infrastructure/
+    ls -la /home/evo/04_Core_Infrastructure/
     echo "Decide: keep at root, move to projects, or archive"
 fi
 
 # 4. Check vault contents
 echo "📁 Vault contents:"
-ls -la /mnt/scratch/vault/
+ls -la /home/evo/vault/
 
 # 5. Verify AI-agnostic structure
 echo ""

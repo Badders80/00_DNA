@@ -124,24 +124,24 @@ Overall DNA:          ████████████████░░░�
 ### For AB to Review
 
 1. **Read BRAND_VOICE.md**
-   - Location: `/mnt/scratch/projects/00_DNA/brand-identity/BRAND_VOICE.md`
+   - Location: `/home/evo/projects/00_DNA/brand-identity/BRAND_VOICE.md`
    - Verify positioning is accurate
    - Note any corrections needed
 
 2. **Check PROMPT_LIBRARY.md**
-   - Location: `/mnt/scratch/projects/00_DNA/system-prompts/PROMPT_LIBRARY.md`
+   - Location: `/home/evo/projects/00_DNA/system-prompts/PROMPT_LIBRARY.md`
    - Confirm AI agent approach makes sense
    - Decide on platform preferences
 
 3. **Review STANDARD_WORKFLOWS.md**
-   - Location: `/mnt/scratch/projects/00_DNA/workflows/STANDARD_WORKFLOWS.md`
+   - Location: `/home/evo/projects/00_DNA/workflows/STANDARD_WORKFLOWS.md`
    - Validate daily operations flow
    - Adjust any procedures
 
 ### For AB to Provide
 
 4. **Open INFORMATION_GAPS.md**
-   - Location: `/mnt/scratch/projects/00_DNA/INFORMATION_GAPS.md`
+   - Location: `/home/evo/projects/00_DNA/INFORMATION_GAPS.md`
    - Start with "High Priority" section
    - Can fill in progressively (not all at once)
 
@@ -175,7 +175,7 @@ During Evolution-3.1 refactor, these files were deleted:
 
 **Can recover from Git history:**
 ```bash
-cd /mnt/scratch/projects/Evolution-3.1
+cd /home/evo/projects/Evolution-3.1
 
 # List all commits that touched these files
 git log --all --full-history -- "BRAND_GUIDELINES.md"
@@ -235,16 +235,16 @@ git show <commit-hash>:BRAND_GUIDELINES.md > /tmp/recovered_brand_guidelines.md
 
 ```bash
 # 1. Read DNA foundations
-cat /mnt/scratch/projects/00_DNA/README.md
+cat /home/evo/projects/00_DNA/README.md
 
 # 2. Get hardware context
-cat /mnt/scratch/projects/00_DNA/build-philosophy/Master_Config_2026.md
+cat /home/evo/projects/00_DNA/build-philosophy/Master_Config_2026.md
 
 # 3. Load appropriate system prompt
-cat /mnt/scratch/projects/00_DNA/system-prompts/PROMPT_LIBRARY.md
+cat /home/evo/projects/00_DNA/system-prompts/PROMPT_LIBRARY.md
 
 # 4. Check brand voice requirements
-cat /mnt/scratch/projects/00_DNA/brand-identity/BRAND_VOICE.md
+cat /home/evo/projects/00_DNA/brand-identity/BRAND_VOICE.md
 
 # Now the agent knows: hardware limits, project structure, brand voice, workflows
 ```
@@ -255,19 +255,19 @@ cat /mnt/scratch/projects/00_DNA/brand-identity/BRAND_VOICE.md
 
 ```bash
 # 1. Check brand voice
-cat /mnt/scratch/projects/00_DNA/brand-identity/BRAND_VOICE.md
+cat /home/evo/projects/00_DNA/brand-identity/BRAND_VOICE.md
 # Section: "Bloomberg-Style Intelligence"
 
 # 2. Review content workflow
-cat /mnt/scratch/projects/00_DNA/workflows/STANDARD_WORKFLOWS.md
+cat /home/evo/projects/00_DNA/workflows/STANDARD_WORKFLOWS.md
 # Section: "Content Generation Pipeline"
 
 # 3. Load content generation agent prompt
-cat /mnt/scratch/projects/00_DNA/system-prompts/PROMPT_LIBRARY.md
+cat /home/evo/projects/00_DNA/system-prompts/PROMPT_LIBRARY.md
 # Section: "Content Generation Agent"
 
 # 4. Execute generation
-cd /mnt/scratch/projects/02_Content_Factory/pipeline
+cd /home/evo/projects/02_Content_Factory/pipeline
 python generate_image.py --prompt "..." --model "flux-schnell"
 ```
 
@@ -277,14 +277,14 @@ python generate_image.py --prompt "..." --model "flux-schnell"
 
 ```bash
 # Day 1 Reading List
-1. /mnt/scratch/projects/00_DNA/README.md                     # Start here
-2. /mnt/scratch/projects/00_DNA/QUICK_REFERENCE.md            # Daily operations
-3. /mnt/scratch/projects/00_DNA/build-philosophy/Master_Config_2026.md  # Hardware
-4. /mnt/scratch/projects/00_DNA/brand-identity/BRAND_VOICE.md # Brand understanding
+1. /home/evo/projects/00_DNA/README.md                     # Start here
+2. /home/evo/projects/00_DNA/QUICK_REFERENCE.md            # Daily operations
+3. /home/evo/projects/00_DNA/build-philosophy/Master_Config_2026.md  # Hardware
+4. /home/evo/projects/00_DNA/brand-identity/BRAND_VOICE.md # Brand understanding
 
 # Day 2 Setup
-5. Run: /mnt/scratch/projects/00_DNA/workflows/audit_jules_repos.sh
-6. Review: /mnt/scratch/projects/00_DNA/workflows/STANDARD_WORKFLOWS.md
+5. Run: /home/evo/projects/00_DNA/workflows/audit_jules_repos.sh
+6. Review: /home/evo/projects/00_DNA/workflows/STANDARD_WORKFLOWS.md
 
 # Day 3+ Reference
 7. Consult DNA whenever establishing new patterns
@@ -314,4 +314,4 @@ python generate_image.py --prompt "..." --model "flux-schnell"
 
 ---
 
-**Ready to fill in the gaps? Start with `/mnt/scratch/projects/00_DNA/INFORMATION_GAPS.md` - High Priority section!**
+**Ready to fill in the gaps? Start with `/home/evo/projects/00_DNA/INFORMATION_GAPS.md` - High Priority section!**

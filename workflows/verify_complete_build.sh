@@ -6,7 +6,7 @@ echo "COMPLETE BUILD VERIFICATION"
 echo "=========================================="
 echo ""
 
-BASE="/mnt/scratch/projects"
+BASE="/home/evo/projects"
 cd "$BASE" || exit 1
 
 # ============================================
@@ -147,15 +147,15 @@ echo "🤖 MODELS DIRECTORY - WHAT'S ACTUALLY THERE?"
 echo "-----------------------------------"
 echo ""
 
-if [ -d "/mnt/scratch/models" ]; then
-    echo "Total models size: $(du -sh /mnt/scratch/models | cut -f1)"
+if [ -d "/home/evo/models" ]; then
+    echo "Total models size: $(du -sh /home/evo/models | cut -f1)"
     echo ""
     echo "Files in models root:"
-    ls -lh /mnt/scratch/models/*.safetensors 2>/dev/null | wc -l | xargs echo "  .safetensors files:"
+    ls -lh /home/evo/models/*.safetensors 2>/dev/null | wc -l | xargs echo "  .safetensors files:"
     echo ""
     
     echo "Subdirectories:"
-    for dir in /mnt/scratch/models/*/; do
+    for dir in /home/evo/models/*/; do
         if [ -d "$dir" ]; then
             dirname=$(basename "$dir")
             file_count=$(find "$dir" -type f | wc -l)
@@ -164,7 +164,7 @@ if [ -d "/mnt/scratch/models" ]; then
         fi
     done
 else
-    echo "❌ /mnt/scratch/models doesn't exist"
+    echo "❌ /home/evo/models doesn't exist"
 fi
 
 echo ""
@@ -199,9 +199,9 @@ else
 fi
 
 # Check for actual models
-model_count=$(find /mnt/scratch/models -name "*.safetensors" -o -name "*.ckpt" -o -name "*.gguf" 2>/dev/null | wc -l)
+model_count=$(find /home/evo/models -name "*.safetensors" -o -name "*.ckpt" -o -name "*.gguf" 2>/dev/null | wc -l)
 if [ "$model_count" -eq 0 ]; then
-    critical_missing+=("⚠️  NO AI MODELS FOUND in /mnt/scratch/models")
+    critical_missing+=("⚠️  NO AI MODELS FOUND in /home/evo/models")
 fi
 
 echo ""
@@ -227,12 +227,12 @@ echo "Items that exist in S: root but NOT in projects/:"
 echo ""
 
 # Check S: drive root
-if [ -d "/mnt/scratch" ]; then
+if [ -d "/home/evo" ]; then
     echo "S: drive root contents:"
-    ls -1 /mnt/scratch | while read item; do
+    ls -1 /home/evo | while read item; do
         if [ "$item" != "projects" ]; then
-            if [ -d "/mnt/scratch/$item" ]; then
-                size=$(du -sh "/mnt/scratch/$item" 2>/dev/null | cut -f1)
+            if [ -d "/home/evo/$item" ]; then
+                size=$(du -sh "/home/evo/$item" 2>/dev/null | cut -f1)
                 echo "  $item/ - $size"
             else
                 echo "  $item (file)"
@@ -240,7 +240,7 @@ if [ -d "/mnt/scratch" ]; then
         fi
     done
 else
-    echo "❌ Cannot access /mnt/scratch"
+    echo "❌ Cannot access /home/evo"
 fi
 
 echo ""

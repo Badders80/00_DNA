@@ -10,9 +10,9 @@ echo ""
 # PART 1: S: Drive Root - What's There?
 # ============================================
 
-echo "📊 S: DRIVE ROOT (/mnt/scratch/)"
+echo "📊 S: DRIVE ROOT (/home/evo/)"
 echo "-----------------------------------"
-cd /mnt/scratch || exit 1
+cd /home/evo || exit 1
 
 for item in */; do
     name=$(basename "$item")
@@ -30,7 +30,7 @@ echo ""
 
 echo "📁 PROJECTS FOLDER - COMPLETE INVENTORY"
 echo "-----------------------------------"
-cd /mnt/scratch/projects || exit 1
+cd /home/evo/projects || exit 1
 
 echo ""
 echo "Root level items:"
@@ -76,7 +76,7 @@ for folder in 00_DNA 01_Platform 02_Content_Factory 03_Tools 04_Intelligence 05_
             find . -type d -empty | sed 's|^./||'
         fi
         
-        cd /mnt/scratch/projects
+        cd /home/evo/projects
         echo ""
     else
         echo "❌ MISSING"
@@ -93,7 +93,7 @@ echo "LOOSE ITEMS IN ROOT"
 echo "=========================================="
 echo ""
 
-cd /mnt/scratch/projects
+cd /home/evo/projects
 
 for item in *; do
     # Skip numbered folders and system items
@@ -200,13 +200,13 @@ echo "=========================================="
 echo ""
 
 echo "S: Drive usage:"
-cd /mnt/scratch
+cd /home/evo
 total_size=$(du -sh . 2>/dev/null | cut -f1)
 echo "  Total: $total_size"
 echo ""
 
 echo "Projects folder:"
-cd /mnt/scratch/projects
+cd /home/evo/projects
 projects_size=$(du -sh . 2>/dev/null | cut -f1)
 echo "  Size: $projects_size"
 echo "  Numbered folders: $(ls -d 0*/ 2>/dev/null | wc -l)/6"

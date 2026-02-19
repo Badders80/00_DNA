@@ -9,7 +9,7 @@ echo "Evolution Stables - Hybrid Migration"
 echo "=========================================="
 echo ""
 
-BASE_DIR="/mnt/scratch/projects"
+BASE_DIR="/home/evo/projects"
 cd "$BASE_DIR" || exit 1
 
 # Safety check

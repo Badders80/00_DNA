@@ -23,7 +23,7 @@
 **From Windows WSL terminal:**
 
 ```bash
-cd /mnt/scratch/projects/00_DNA/workflows
+cd /home/evo/projects/00_DNA/workflows
 chmod +x audit_jules_repos.sh
 ./audit_jules_repos.sh > repo_audit_output.txt
 ```
@@ -40,17 +40,17 @@ Based on your screenshots, check these specifically:
 
 ```bash
 # Asset Generation (has active work)
-cd /mnt/scratch/projects/Asset_Generation  # or wherever it is
+cd /home/evo/projects/Asset_Generation  # or wherever it is
 git status
 git pull
 
 # Evolution-3.1 (SEO work completed 5 days ago)
-cd /mnt/scratch/projects/Evolution-3.1
+cd /home/evo/projects/Evolution-3.1
 git status  
 git pull
 
 # Evolution-Studio-MCP (MCP integration work)
-cd /mnt/scratch/projects/Evolution-Studio-MCP
+cd /home/evo/projects/Evolution-Studio-MCP
 git status
 git pull
 ```
@@ -120,7 +120,7 @@ After audit is done and you've decided what to keep:
 ### Folder Creation
 
 ```bash
-cd /mnt/scratch/projects/
+cd /home/evo/projects/
 
 # Create new structure
 mkdir -p 01_Platform/evolution-3.1
@@ -147,7 +147,7 @@ Move/create these into DNA:
 ### Check Everything at Once
 
 ```bash
-cd /mnt/scratch/projects/
+cd /home/evo/projects/
 ls -lah | grep "^d" | awk '{print $9}' | while read dir; do
     if [ -d "$dir/.git" ]; then
         echo "=== $dir ==="
@@ -159,14 +159,14 @@ done
 ### Find Large Files (>500MB)
 
 ```bash
-cd /mnt/scratch/projects/
+cd /home/evo/projects/
 find . -type f -size +500M -exec ls -lh {} \; | awk '{print $9, $5}'
 ```
 
 ### Check Disk Usage by Project
 
 ```bash
-cd /mnt/scratch/projects/
+cd /home/evo/projects/
 du -sh */ | sort -hr
 ```
 

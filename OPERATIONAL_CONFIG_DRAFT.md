@@ -20,7 +20,7 @@
 
 ### Storage Architecture
 
-**Primary Mount:** `/mnt/scratch`  
+**Primary Mount:** `/home/evo`  
 **Capacity:** 839GB total, ~697GB free  
 **Purpose:** Production workspace for all Evolution Studio operations
 
@@ -28,10 +28,10 @@
 
 ## 📂 The "Safe-Path" Modular Standard
 
-All development follows the **00-05 architecture** at `/mnt/scratch/projects/`
+All development follows the **00-05 architecture** at `/home/evo/projects/`
 
 ```
-/mnt/scratch/projects/
+/home/evo/projects/
 ├── 00_DNA/              # System configuration, health scripts, master docs
 ├── 01_Platform/         # Core orchestration tools and bridges
 ├── 02_Content_Factory/  # ComfyUI (dormant), future video generation
@@ -73,12 +73,12 @@ ollama run <model-name>
 
 ### MCP Server (Filesystem Bridge)
 - **Process:** `mcp-server-filesystem`
-- **Scope:** `/mnt/scratch/projects`
+- **Scope:** `/home/evo/projects`
 - **Purpose:** File system access for AI agents
 - **Status:** Configured (connection debugging in progress)
 
 ### ComfyUI (Dormant)
-- **Location:** `/mnt/scratch/projects/02_Content_Factory/ComfyUI`
+- **Location:** `/home/evo/projects/02_Content_Factory/ComfyUI`
 - **Status:** Installed but not in active use
 - **Port:** 8188 (when running)
 - **Future:** Video generation pipeline integration
@@ -91,17 +91,17 @@ ollama run <model-name>
 **NEVER install or clone projects in `/home/evo/`**
 
 - ❌ **FORBIDDEN ZONE:** `/home/evo/` (causes filesystem conflicts)
-- ✅ **SAFE ZONE:** `/mnt/scratch/projects/` (all work happens here)
+- ✅ **SAFE ZONE:** `/home/evo/projects/` (all work happens here)
 - ✅ **VENV RULE:** Virtual environments must be within project folders
 
 **Why?** The home directory has caused mount issues, path conflicts, and storage problems. All work must live in the scratch drive structure.
 
 ### 2. Health Check Script
-Location: `/mnt/scratch/projects/evo_health_check.sh`
+Location: `/home/evo/projects/evo_health_check.sh`
 
 ```bash
 # Run health check
-/mnt/scratch/projects/evo_health_check.sh
+/home/evo/projects/evo_health_check.sh
 ```
 
 **Monitors:**
@@ -111,7 +111,7 @@ Location: `/mnt/scratch/projects/evo_health_check.sh`
 - ComfyUI status
 
 ### 3. Model Management
-- Models >500MB live in `/mnt/scratch/models/`
+- Models >500MB live in `/home/evo/models/`
 - Reference globally via absolute paths
 - Never duplicate models across projects
 - Total model storage: ~22GB
@@ -122,8 +122,8 @@ Location: `/mnt/scratch/projects/evo_health_check.sh`
 
 ### Mount Verification
 ```bash
-df -h /mnt/scratch  # Should show ~697GB free
-ls -la /mnt/scratch/projects/  # Verify 00-05 structure
+df -h /home/evo  # Should show ~697GB free
+ls -la /home/evo/projects/  # Verify 00-05 structure
 ```
 
 ### VRAM Safety

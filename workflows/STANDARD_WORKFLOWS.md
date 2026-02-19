@@ -13,25 +13,25 @@
 #!/bin/bash
 # Morning check - verify all systems operational
 
-cd /mnt/scratch/projects
+cd /home/evo/projects
 
 # 1. Check Git status across all repos
 cd 00_DNA/workflows
 ./audit_jules_repos.sh | head -100
 
 # 2. Pull latest changes
-cd /mnt/scratch/projects/01_Platform/evolution-3.1
+cd /home/evo/projects/01_Platform/evolution-3.1
 git pull
 
-cd /mnt/scratch/projects/02_Content_Factory/pipeline
+cd /home/evo/projects/02_Content_Factory/pipeline
 git pull
 
-cd /mnt/scratch/projects/04_Intelligence/gemini-workspace
+cd /home/evo/projects/04_Intelligence/gemini-workspace
 git pull
 
 # 3. Check hardware status
 nvidia-smi  # Verify GPU available
-df -h /mnt/scratch  # Check disk space
+df -h /home/evo  # Check disk space
 ```
 
 ---
@@ -42,7 +42,7 @@ df -h /mnt/scratch  # Check disk space
 
 ```bash
 # 1. Create feature branch
-cd /mnt/scratch/projects/01_Platform/evolution-3.1
+cd /home/evo/projects/01_Platform/evolution-3.1
 git checkout -b feature/description
 
 # 2. Work on feature
@@ -71,7 +71,7 @@ git branch -d feature/description
 
 ```bash
 # For urgent production fixes
-cd /mnt/scratch/projects/01_Platform/evolution-3.1
+cd /home/evo/projects/01_Platform/evolution-3.1
 
 # Create hotfix branch from main
 git checkout -b hotfix/critical-issue
@@ -121,14 +121,14 @@ Format: `type: short description`
 
 ```bash
 # 1. Navigate to content factory
-cd /mnt/scratch/projects/02_Content_Factory/pipeline
+cd /home/evo/projects/02_Content_Factory/pipeline
 
 # 2. Start ComfyUI server (if not running)
-cd /mnt/scratch/projects/02_Content_Factory/comfyui-main
+cd /home/evo/projects/02_Content_Factory/comfyui-main
 python main.py --listen 0.0.0.0 &
 
 # 3. Generate content
-cd /mnt/scratch/projects/02_Content_Factory/pipeline
+cd /home/evo/projects/02_Content_Factory/pipeline
 python generate_image.py \
   --prompt "3YO thoroughbred in barrier trial, professional racing photography" \
   --model "flux-schnell" \
@@ -145,7 +145,7 @@ python generate_image.py \
 
 ```bash
 # Generate multiple assets in one run
-cd /mnt/scratch/projects/02_Content_Factory/pipeline
+cd /home/evo/projects/02_Content_Factory/pipeline
 
 # Create batch prompts file
 cat > batch_prompts.txt << EOF
@@ -189,7 +189,7 @@ done < batch_prompts.txt
 **Before Starting:**
 ```bash
 # Ensure local is synced
-cd /mnt/scratch/projects/Evolution-3.1
+cd /home/evo/projects/Evolution-3.1
 git pull
 git status  # Should be clean
 ```
@@ -202,7 +202,7 @@ git status  # Should be clean
 **After Session:**
 ```bash
 # Pull Jules's changes
-cd /mnt/scratch/projects/Evolution-3.1
+cd /home/evo/projects/Evolution-3.1
 git pull
 
 # Review changes
@@ -224,15 +224,15 @@ npm run dev  # or appropriate command
 
 ```bash
 # ComfyUI MCP (for image generation tools)
-cd /mnt/scratch/projects/03_Tools/mcp-servers/comfyui
+cd /home/evo/projects/03_Tools/mcp-servers/comfyui
 node index.js &
 
 # Gemini MCP (for Gemini ADK integration)
-cd /mnt/scratch/projects/03_Tools/mcp-servers/gemini
+cd /home/evo/projects/03_Tools/mcp-servers/gemini
 node index.js &
 
 # Evolution Studio MCP
-cd /mnt/scratch/projects/03_Tools/mcp-servers/evolution-studio
+cd /home/evo/projects/03_Tools/mcp-servers/evolution-studio
 node index.js &
 ```
 
@@ -254,7 +254,7 @@ curl http://localhost:3000/health  # Adjust port as needed
 ps aux | grep "node.*mcp"
 
 # Check logs
-tail -f /mnt/scratch/projects/03_Tools/mcp-servers/*/logs/*.log
+tail -f /home/evo/projects/03_Tools/mcp-servers/*/logs/*.log
 
 # Restart if needed
 pkill -f "node.*mcp"
@@ -276,7 +276,7 @@ nvidia-smi
 pkill -f python
 
 # 2. Restart ComfyUI
-cd /mnt/scratch/projects/02_Content_Factory/comfyui-main
+cd /home/evo/projects/02_Content_Factory/comfyui-main
 python main.py --listen 0.0.0.0
 
 # 3. Verify clean state
@@ -287,16 +287,16 @@ nvidia-smi  # Should show low memory usage when idle
 
 ```bash
 # Check disk usage
-df -h /mnt/scratch
+df -h /home/evo
 
 # Find large files
-du -sh /mnt/scratch/projects/*/ | sort -hr | head -20
+du -sh /home/evo/projects/*/ | sort -hr | head -20
 
 # Clean up generated content older than 30 days
-find /mnt/scratch/projects/02_Content_Factory/*/output -type f -mtime +30 -delete
+find /home/evo/projects/02_Content_Factory/*/output -type f -mtime +30 -delete
 
 # Clean up Python cache
-find /mnt/scratch/projects -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null
+find /home/evo/projects -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null
 
 # Clean up node_modules in non-active projects
 # (manual review recommended)
@@ -318,14 +318,14 @@ BACKUP_DIR="/mnt/backup/evolution-${BACKUP_DATE}"
 mkdir -p "$BACKUP_DIR"
 
 # Backup DNA (standards and docs)
-cp -r /mnt/scratch/projects/00_DNA "$BACKUP_DIR/"
+cp -r /home/evo/projects/00_DNA "$BACKUP_DIR/"
 
 # Backup environment configs
 cp /home/evo/.bashrc "$BACKUP_DIR/"
 cp /home/evo/.wslconfig "$BACKUP_DIR/" 2>/dev/null || true
 
 # Backup important config files from projects
-find /mnt/scratch/projects -name ".env" -o -name "config.json" | \
+find /home/evo/projects -name ".env" -o -name "config.json" | \
   xargs -I {} cp {} "$BACKUP_DIR/"
 
 echo "Backup complete: $BACKUP_DIR"
@@ -358,7 +358,7 @@ git checkout <commit-before-deletion> -- path/to/file
 
 ```bash
 # 1. Clone DNA first
-cd /mnt/scratch/projects
+cd /home/evo/projects
 git clone https://github.com/Badders80/Evolution-DNA.git 00_DNA  # If you create this repo
 
 # 2. Read Master Config
@@ -405,7 +405,7 @@ watch -n 1 nvidia-smi
 
 ```bash
 # Next.js build optimization
-cd /mnt/scratch/projects/01_Platform/evolution-3.1
+cd /home/evo/projects/01_Platform/evolution-3.1
 
 # Use turbo mode
 npm run build -- --turbo
@@ -440,7 +440,7 @@ npm run analyze  # If configured
 
 ---
 
-**Save Location:** `/mnt/scratch/projects/00_DNA/workflows/`
+**Save Location:** `/home/evo/projects/00_DNA/workflows/`
 
 **Related Documents:**
 - Master_Config_2026.md (hardware setup)

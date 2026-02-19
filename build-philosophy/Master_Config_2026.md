@@ -62,7 +62,7 @@ These methods are BANNED. If found in old documentation, ignore them.
 ### 2. Production Drive (S:) - Samsung 990 PRO
 
 - **Windows Path:** S:\
-- **Linux Path:** /mnt/scratch/ (Bind Mount)
+- **Linux Path:** /home/evo/ (Bind Mount)
 - **Purpose:** The "Hot" Drive. High-IOPS workspace for all active development.
 
 ---
@@ -72,7 +72,7 @@ These methods are BANNED. If found in old documentation, ignore them.
 All commands must target this structure:
 
 ```
-/mnt/scratch/ (Mapped from S:\)
+/home/evo/ (Mapped from S:\)
 ├── projects/          # ✅ YOUR ACTIVE WORKSPACE
 │   ├── Evolution-3.1/ # Active Agent Code
 │   ├── ComfyUI/       # Image Gen (Uses RTX 3060)
@@ -92,24 +92,24 @@ All commands must target this structure:
 ### Home Directory is Lava (~)
 
 - Never run git clone in ~ or /home/evo/.
-- ALWAYS cd /mnt/scratch/projects/ first.
+- ALWAYS cd /home/evo/projects/ first.
 
 ### Venv Location Strategy
 
 Create venvs inside the project folder on S:
 
 ```bash
-python -m venv /mnt/scratch/projects/[name]/venv
+python -m venv /home/evo/projects/[name]/venv
 ```
 
 ### The "Big File" Rule
 
-- Any file >500MB goes to /mnt/scratch/models/.
+- Any file >500MB goes to /home/evo/models/.
 - Never save large .safetensors to the project folder itself.
 
 ### Hardware Isolation
 
-- User evo (UID 1000) owns /mnt/scratch.
+- User evo (UID 1000) owns /home/evo.
 - GPU 0 (RTX 3060) is reserved for Python/CUDA processes.
 
 ---
@@ -120,15 +120,15 @@ python -m venv /mnt/scratch/projects/[name]/venv
 
 **Task Scheduler:** Evolution_Studio_AutoMount
 
-**Action:** `wsl -u root mount --bind /mnt/s /mnt/scratch`
+**Action:** `wsl -u root mount --bind /mnt/s /home/evo`
 
-**Effect:** Ensures S:\ is visible as /mnt/scratch instantly upon login.
+**Effect:** Ensures S:\ is visible as /home/evo instantly upon login.
 
 ### Emergency Reset (.bat)
 
 **File:** Desktop\EVO_RESET.bat
 
-(Run this if ls /mnt/scratch returns empty)
+(Run this if ls /home/evo returns empty)
 
 ```batch
 @echo off
@@ -139,8 +139,8 @@ echo 2. Verifying Samsung 990 PRO (S:)...
 if exist S:\ ( echo [OK] S: Drive Found ) else ( echo [FAIL] S: Drive Missing! Check cables. & pause & exit )
 echo 3. Restarting & Binding Mount...
 timeout /t 3
-wsl -u root -e mkdir -p /mnt/scratch
-wsl -u root -e mount --bind /mnt/s /mnt/scratch
+wsl -u root -e mkdir -p /home/evo
+wsl -u root -e mount --bind /mnt/s /home/evo
 echo [SUCCESS] Evolution Studio Online. RTX 3060 Ready.
 pause
 ```
@@ -165,11 +165,11 @@ guiApplications=false
 
 ## 🛠️ Core Configuration & Path Structure
 
-Your ComfyUI is located at `/mnt/scratch/WSL/projects/ComfyUI` on your high-speed S: drive.
+Your ComfyUI is located at `/home/evo/WSL/projects/ComfyUI` on your high-speed S: drive.
 
-**Model Paths:** ComfyUI is configured to look for models in `/mnt/scratch/models/GGUF/` and its own internal subfolders. You likely use an extra_model_paths.yaml file to link these central "Vault" models without duplicating large files.
+**Model Paths:** ComfyUI is configured to look for models in `/home/evo/models/GGUF/` and its own internal subfolders. You likely use an extra_model_paths.yaml file to link these central "Vault" models without duplicating large files.
 
-**Workflows:** You have a dedicated directory at `/mnt/scratch/WSL/projects/ComfyUI_Workflows`. These are stored as JSON files or embedded in generated PNG metadata, allowing you to "drag and drop" a previous creation back into the UI to instantly rebuild the logic.
+**Workflows:** You have a dedicated directory at `/home/evo/WSL/projects/ComfyUI_Workflows`. These are stored as JSON files or embedded in generated PNG metadata, allowing you to "drag and drop" a previous creation back into the UI to instantly rebuild the logic.
 
 ---
 

@@ -131,20 +131,20 @@ We've created:
 
 ```bash
 # Daily audit
-cd /mnt/scratch/projects/00_DNA/workflows
+cd /home/evo/projects/00_DNA/workflows
 ./audit_jules_repos.sh
 
 # Read quick reference
-cat /mnt/scratch/projects/00_DNA/QUICK_REFERENCE.md
+cat /home/evo/projects/00_DNA/QUICK_REFERENCE.md
 
 # Check brand voice
-cat /mnt/scratch/projects/00_DNA/brand-identity/BRAND_VOICE.md
+cat /home/evo/projects/00_DNA/brand-identity/BRAND_VOICE.md
 
 # View visual system
-cat /mnt/scratch/projects/00_DNA/brand-identity/visual/VISUAL_SYSTEM.md
+cat /home/evo/projects/00_DNA/brand-identity/visual/VISUAL_SYSTEM.md
 
 # Check operational config
-cat /mnt/scratch/projects/00_DNA/OPERATIONAL_CONFIG_DRAFT.md
+cat /home/evo/projects/00_DNA/OPERATIONAL_CONFIG_DRAFT.md
 ```
 
 ---

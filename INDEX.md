@@ -8,12 +8,12 @@
 ## 🚀 Quick Start (New Here?)
 
 **Read These First:**
-1. `/mnt/scratch/projects/00_DNA/README.md` - What is DNA?
-2. `/mnt/scratch/projects/00_DNA/QUICK_REFERENCE.md` - Daily commands
-3. `/mnt/scratch/projects/00_DNA/build-philosophy/Master_Config_2026.md` - Hardware setup
+1. `/home/evo/projects/00_DNA/README.md` - What is DNA?
+2. `/home/evo/projects/00_DNA/QUICK_REFERENCE.md` - Daily commands
+3. `/home/evo/projects/00_DNA/build-philosophy/Master_Config_2026.md` - Hardware setup
 
 **Then:**
-4. `/mnt/scratch/projects/00_DNA/INFORMATION_GAPS.md` - Help fill this in!
+4. `/home/evo/projects/00_DNA/INFORMATION_GAPS.md` - Help fill this in!
 
 ---
 
@@ -148,7 +148,7 @@
 
 ```bash
 # Search all DNA docs
-cd /mnt/scratch/projects/00_DNA
+cd /home/evo/projects/00_DNA
 grep -r "your search term" .
 
 # Search specific category
@@ -164,7 +164,7 @@ grep -r "claude" system-prompts/
 grep -r "RTX 3060" .
 
 # Find path rules
-grep -r "/mnt/scratch" .
+grep -r "/home/evo" .
 
 # Find brand requirements
 grep -r "transparent" brand-identity/
@@ -229,7 +229,7 @@ Documentation:        ███████████████████�
 ### How to Update DNA
 
 ```bash
-cd /mnt/scratch/projects/00_DNA
+cd /home/evo/projects/00_DNA
 
 # Edit relevant file
 nano brand-identity/BRAND_VOICE.md
@@ -275,7 +275,7 @@ git push origin main
 ### "I can't find [X]"
 
 1. Check this INDEX.md for location
-2. Use grep to search all DNA: `grep -r "keyword" /mnt/scratch/projects/00_DNA`
+2. Use grep to search all DNA: `grep -r "keyword" /home/evo/projects/00_DNA`
 3. Check if it's in INFORMATION_GAPS.md (not yet created)
 
 ### "DNA says [X] but I need to do [Y]"
@@ -341,7 +341,7 @@ git push origin main
 
 ```bash
 # Navigate to DNA
-cd /mnt/scratch/projects/00_DNA
+cd /home/evo/projects/00_DNA
 
 # View this index
 cat INDEX.md
@@ -383,4 +383,4 @@ cat build-philosophy/Master_Config_2026.md
 ---
 
 *Last Updated: 2026-01-27*  
-*Location: `/mnt/scratch/projects/00_DNA/INDEX.md`*
+*Location: `/home/evo/projects/00_DNA/INDEX.md`*

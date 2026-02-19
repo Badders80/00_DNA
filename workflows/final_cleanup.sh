@@ -8,7 +8,7 @@ echo "FINAL CLEANUP - Fixing All Issues"
 echo "=========================================="
 echo ""
 
-cd /mnt/scratch/projects || exit 1
+cd /home/evo/projects || exit 1
 
 # ============================================
 # FIX 1: Find and move Evolution-3.1

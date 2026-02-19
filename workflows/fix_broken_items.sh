@@ -9,7 +9,7 @@ echo "Evolution Stables - Applying Fixes"
 echo "=========================================="
 echo ""
 
-BASE="/mnt/scratch/projects"
+BASE="/home/evo/projects"
 cd "$BASE" || exit 1
 
 # ============================================
@@ -20,18 +20,18 @@ echo "🗑️  FIX 1: Removing Empty Model Folders"
 echo "-----------------------------------"
 echo ""
 
-if [ -d "/mnt/scratch/models/Checkpoints" ]; then
-    file_count=$(find /mnt/scratch/models/Checkpoints -type f | wc -l)
+if [ -d "/home/evo/models/Checkpoints" ]; then
+    file_count=$(find /home/evo/models/Checkpoints -type f | wc -l)
     if [ "$file_count" -eq 0 ]; then
-        rmdir /mnt/scratch/models/Checkpoints
+        rmdir /home/evo/models/Checkpoints
         echo "✅ Removed empty Checkpoints folder"
     fi
 fi
 
-if [ -d "/mnt/scratch/models/GGUF" ]; then
-    file_count=$(find /mnt/scratch/models/GGUF -type f | wc -l)
+if [ -d "/home/evo/models/GGUF" ]; then
+    file_count=$(find /home/evo/models/GGUF -type f | wc -l)
     if [ "$file_count" -eq 0 ]; then
-        rmdir /mnt/scratch/models/GGUF
+        rmdir /home/evo/models/GGUF
         echo "✅ Removed empty GGUF folder"
     fi
 fi

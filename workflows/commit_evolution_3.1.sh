@@ -6,7 +6,7 @@ echo "=========================================="
 echo "Evolution-3.1 - Securing Refactor Work"
 echo "=========================================="
 
-cd /mnt/scratch/projects/Evolution-3.1 || exit 1
+cd /home/evo/projects/Evolution-3.1 || exit 1
 
 echo ""
 echo "Current Status:"

@@ -20,7 +20,7 @@ REPOS=(
 )
 
 # Base path - adjust if your repos are elsewhere
-BASE_PATH="/mnt/scratch/projects"
+BASE_PATH="/home/evo/projects"
 
 cd "$BASE_PATH" || exit 1
 

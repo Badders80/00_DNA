@@ -166,7 +166,7 @@ ollama run [model-name] "Your prompt here"
 ## MCP Server Integration
 
 **Process:** `mcp-server-filesystem`  
-**Scope:** `/mnt/scratch/projects`  
+**Scope:** `/home/evo/projects`  
 **Purpose:** Provides file system access to AI agents
 
 ### Configuration Location
@@ -181,7 +181,7 @@ ollama run [model-name] "Your prompt here"
 
 ### Manual Test
 ```bash
-npx -y @modelcontextprotocol/server-filesystem /mnt/scratch/projects
+npx -y @modelcontextprotocol/server-filesystem /home/evo/projects
 # Should output: "Secure MCP Filesystem Server running on stdio"
 ```
 
@@ -189,7 +189,7 @@ npx -y @modelcontextprotocol/server-filesystem /mnt/scratch/projects
 
 ## Gemini Agent Workspace
 
-**Location:** `/mnt/scratch/projects/04_Intelligence/gemini-workspace`
+**Location:** `/home/evo/projects/04_Intelligence/gemini-workspace`
 
 ### Active Agent Configurations
 
@@ -290,7 +290,7 @@ nvidia-smi
 ### MCP Server Not Connecting
 ```bash
 # Test manual run
-npx -y @modelcontextprotocol/server-filesystem /mnt/scratch/projects
+npx -y @modelcontextprotocol/server-filesystem /home/evo/projects
 
 # Check config
 cat ~/.config/claude/mcp_settings.json

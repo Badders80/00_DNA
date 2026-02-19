@@ -2,7 +2,7 @@
 COMPLETE S: DRIVE AUDIT
 ==========================================
 
-📊 S: DRIVE ROOT (/mnt/scratch/)
+📊 S: DRIVE ROOT (/home/evo/)
 -----------------------------------
 $RECYCLE.BIN: 1010M (17692 files)
 04_Core_Infrastructure: 67G (2721 files)

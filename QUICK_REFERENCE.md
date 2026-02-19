@@ -9,11 +9,11 @@
 
 ```bash
 # Navigate to any area quickly
-alias evo-dna="cd /mnt/scratch/projects/00_DNA"
-alias evo-platform="cd /mnt/scratch/projects/01_Platform/evolution-3.1"
-alias evo-factory="cd /mnt/scratch/projects/02_Content_Factory"
-alias evo-tools="cd /mnt/scratch/projects/03_Tools"
-alias evo-ai="cd /mnt/scratch/projects/04_Intelligence"
+alias evo-dna="cd /home/evo/projects/00_DNA"
+alias evo-platform="cd /home/evo/projects/01_Platform/evolution-3.1"
+alias evo-factory="cd /home/evo/projects/02_Content_Factory"
+alias evo-tools="cd /home/evo/projects/03_Tools"
+alias evo-ai="cd /home/evo/projects/04_Intelligence"
 
 # Add these to your ~/.bashrc for permanent shortcuts
 ```
@@ -43,12 +43,12 @@ alias evo-ai="cd /mnt/scratch/projects/04_Intelligence"
 
 ```bash
 # Via symlink (new way)
-cd /mnt/scratch/projects/01_Platform/evolution-3.1
+cd /home/evo/projects/01_Platform/evolution-3.1
 git pull
 git status
 
 # Via original location (still works)
-cd /mnt/scratch/projects/Evolution-3.1
+cd /home/evo/projects/Evolution-3.1
 git pull
 git status
 
@@ -59,18 +59,18 @@ git status
 
 ```bash
 # Via symlink (new way)
-cd /mnt/scratch/projects/02_Content_Factory/pipeline
+cd /home/evo/projects/02_Content_Factory/pipeline
 git pull
 
 # Via original location
-cd /mnt/scratch/projects/Asset_Generation
+cd /home/evo/projects/Asset_Generation
 git pull
 ```
 
 ### Audit All Repos
 
 ```bash
-cd /mnt/scratch/projects/00_DNA/workflows
+cd /home/evo/projects/00_DNA/workflows
 ./audit_jules_repos.sh
 ```
 
@@ -80,7 +80,7 @@ cd /mnt/scratch/projects/00_DNA/workflows
 
 ### New Platform Feature
 ```bash
-cd /mnt/scratch/projects/01_Platform/evolution-3.1
+cd /home/evo/projects/01_Platform/evolution-3.1
 git checkout -b feature/new-thing
 # ... do work ...
 git add .
@@ -90,13 +90,13 @@ git push origin feature/new-thing
 
 ### New Content Generation Workflow
 ```bash
-cd /mnt/scratch/projects/02_Content_Factory/workflows
+cd /home/evo/projects/02_Content_Factory/workflows
 # Create new workflow JSON
 ```
 
 ### New MCP Server
 ```bash
-cd /mnt/scratch/projects/03_Tools/mcp-servers
+cd /home/evo/projects/03_Tools/mcp-servers
 mkdir my-new-server
 cd my-new-server
 git init
@@ -108,20 +108,20 @@ git init
 
 ### Morning Check
 ```bash
-cd /mnt/scratch/projects/00_DNA/workflows
+cd /home/evo/projects/00_DNA/workflows
 ./audit_jules_repos.sh | head -50
 ```
 
 ### Before Starting Work
 ```bash
 # Pull latest changes
-cd /mnt/scratch/projects/01_Platform/evolution-3.1
+cd /home/evo/projects/01_Platform/evolution-3.1
 git pull
 
-cd /mnt/scratch/projects/02_Content_Factory/pipeline
+cd /home/evo/projects/02_Content_Factory/pipeline
 git pull
 
-cd /mnt/scratch/projects/04_Intelligence/gemini-workspace
+cd /home/evo/projects/04_Intelligence/gemini-workspace
 git pull
 ```
 
@@ -139,7 +139,7 @@ git push origin main
 
 ### ComfyUI
 ```bash
-cd /mnt/scratch/projects/02_Content_Factory/comfyui-main
+cd /home/evo/projects/02_Content_Factory/comfyui-main
 python main.py --listen 0.0.0.0
 # Access at localhost:8188
 ```
@@ -147,13 +147,13 @@ python main.py --listen 0.0.0.0
 ### MCP Servers
 ```bash
 # ComfyUI MCP
-cd /mnt/scratch/projects/03_Tools/mcp-servers/comfyui
+cd /home/evo/projects/03_Tools/mcp-servers/comfyui
 
 # Gemini MCP
-cd /mnt/scratch/projects/03_Tools/mcp-servers/gemini
+cd /home/evo/projects/03_Tools/mcp-servers/gemini
 
 # Evolution Studio MCP
-cd /mnt/scratch/projects/03_Tools/mcp-servers/evolution-studio
+cd /home/evo/projects/03_Tools/mcp-servers/evolution-studio
 ```
 
 ---
@@ -164,22 +164,22 @@ cd /mnt/scratch/projects/03_Tools/mcp-servers/evolution-studio
 
 **Hardware Setup Info:**
 ```bash
-cat /mnt/scratch/projects/00_DNA/build-philosophy/Master_Config_2026.md
+cat /home/evo/projects/00_DNA/build-philosophy/Master_Config_2026.md
 ```
 
 **Brand Guidelines:**
 ```bash
-cd /mnt/scratch/projects/00_DNA/brand-identity
+cd /home/evo/projects/00_DNA/brand-identity
 ```
 
 **System Prompts:**
 ```bash
-cd /mnt/scratch/projects/00_DNA/system-prompts
+cd /home/evo/projects/00_DNA/system-prompts
 ```
 
 **Migration History:**
 ```bash
-cat /mnt/scratch/projects/00_DNA/REORGANIZATION_COMPLETE.md
+cat /home/evo/projects/00_DNA/REORGANIZATION_COMPLETE.md
 ```
 
 ---
@@ -187,7 +187,7 @@ cat /mnt/scratch/projects/00_DNA/REORGANIZATION_COMPLETE.md
 ## 🧪 Using _scratch
 
 ```bash
-cd /mnt/scratch/projects/_scratch
+cd /home/evo/projects/_scratch
 
 # Quick test
 mkdir test-idea
@@ -206,18 +206,18 @@ cd test-idea
 ### "Symlink broken"
 ```bash
 # Check what it points to
-ls -la /mnt/scratch/projects/01_Platform/evolution-3.1
+ls -la /home/evo/projects/01_Platform/evolution-3.1
 
 # Should show: evolution-3.1 -> ../Evolution-3.1
 # If broken, recreate:
-cd /mnt/scratch/projects/01_Platform
+cd /home/evo/projects/01_Platform
 ln -sf ../Evolution-3.1 evolution-3.1
 ```
 
 ### "Git says repo not found"
 ```bash
 # You might be in the symlink path. Go to original:
-cd /mnt/scratch/projects/Evolution-3.1
+cd /home/evo/projects/Evolution-3.1
 git remote -v
 # Should show GitHub URL
 ```
@@ -225,7 +225,7 @@ git remote -v
 ### "Can't find my files"
 ```bash
 # Everything is still in original locations:
-ls /mnt/scratch/projects/
+ls /home/evo/projects/
 # Look for repo name without number prefix
 ```
 
@@ -272,13 +272,13 @@ projects/
 pwd -P
 
 # Find large files
-find /mnt/scratch/projects -type f -size +500M
+find /home/evo/projects -type f -size +500M
 
 # Disk usage by folder
-du -sh /mnt/scratch/projects/*/ | sort -hr
+du -sh /home/evo/projects/*/ | sort -hr
 
 # Check all git repos at once
-cd /mnt/scratch/projects/00_DNA/workflows
+cd /home/evo/projects/00_DNA/workflows
 ./audit_jules_repos.sh
 
 # Quick commit all changes in current repo
@@ -289,4 +289,4 @@ git add -A && git commit -m "Quick save" && git push
 
 **Keep this file handy for daily reference!**
 
-Save location: `/mnt/scratch/projects/00_DNA/QUICK_REFERENCE.md`
+Save location: `/home/evo/projects/00_DNA/QUICK_REFERENCE.md`

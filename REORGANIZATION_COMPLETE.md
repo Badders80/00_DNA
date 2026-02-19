@@ -27,7 +27,7 @@
 ## Your New Structure
 
 ```
-/mnt/scratch/projects/
+/home/evo/projects/
 │
 ├── 00_DNA/                                    [✨ North Star - Standards & Philosophy]
 │   ├── brand-identity/
@@ -87,7 +87,7 @@ The numbered folders (01-05) contain **symlinks** that point to the original Git
 
 **Example:**
 ```bash
-cd /mnt/scratch/projects/01_Platform/evolution-3.1
+cd /home/evo/projects/01_Platform/evolution-3.1
 # You're actually in Evolution-3.1/ but via symlink
 git pull    # Still works!
 git status  # Still works!
@@ -108,11 +108,11 @@ All your repos are still in their original locations with working Git remotes:
 
 ```bash
 # From symlink location
-cd /mnt/scratch/projects/01_Platform/evolution-3.1
+cd /home/evo/projects/01_Platform/evolution-3.1
 git pull    # ✅ Works
 
 # From original location
-cd /mnt/scratch/projects/Evolution-3.1
+cd /home/evo/projects/Evolution-3.1
 git pull    # ✅ Also works
 
 # They're the same repo!
@@ -123,9 +123,9 @@ git pull    # ✅ Also works
 ## Jules Integration
 
 Your Jules codebases are still accessible at their original locations:
-- `Badders80/Asset_Generation` → `/mnt/scratch/projects/Asset_Generation`
-- `Badders80/Evolution-3.1` → `/mnt/scratch/projects/Evolution-3.1`
-- `Badders80/Evolution-Studio-MCP` → `/mnt/scratch/projects/Evolution-Studio-MCP`
+- `Badders80/Asset_Generation` → `/home/evo/projects/Asset_Generation`
+- `Badders80/Evolution-3.1` → `/home/evo/projects/Evolution-3.1`
+- `Badders80/Evolution-Studio-MCP` → `/home/evo/projects/Evolution-Studio-MCP`
 
 Jules will continue to work with these repos without any changes needed.
 
@@ -137,7 +137,7 @@ Jules will continue to work with these repos without any changes needed.
 
 ```bash
 # Check symlinks
-cd /mnt/scratch/projects/01_Platform/evolution-3.1
+cd /home/evo/projects/01_Platform/evolution-3.1
 pwd -P    # Shows real location
 
 # Test Git
@@ -145,15 +145,15 @@ git pull
 git status
 
 # Check all repos
-cd /mnt/scratch/projects/00_DNA/workflows
+cd /home/evo/projects/00_DNA/workflows
 ./audit_jules_repos.sh
 ```
 
 ### 2. Update Any Hardcoded Paths
 
-If you have scripts with absolute paths like `/mnt/scratch/projects/Evolution-3.1`, they still work! But you can also use the new organized paths:
-- Old: `/mnt/scratch/projects/Evolution-3.1`
-- New: `/mnt/scratch/projects/01_Platform/evolution-3.1` (same thing via symlink)
+If you have scripts with absolute paths like `/home/evo/projects/Evolution-3.1`, they still work! But you can also use the new organized paths:
+- Old: `/home/evo/projects/Evolution-3.1`
+- New: `/home/evo/projects/01_Platform/evolution-3.1` (same thing via symlink)
 
 ### 3. Populate DNA Folders
 
@@ -162,13 +162,13 @@ Now that structure exists, start filling it:
 **Brand Identity:**
 ```bash
 # Move brand files into DNA
-cp /mnt/scratch/projects/brand_voice /mnt/scratch/projects/00_DNA/brand-identity/
+cp /home/evo/projects/brand_voice /home/evo/projects/00_DNA/brand-identity/
 ```
 
 **System Prompts:**
 ```bash
 # Create AI agent configs
-mkdir -p /mnt/scratch/projects/00_DNA/system-prompts/{claude,gemini,jules}
+mkdir -p /home/evo/projects/00_DNA/system-prompts/{claude,gemini,jules}
 # Add your prompts here
 ```
 
@@ -177,7 +177,7 @@ mkdir -p /mnt/scratch/projects/00_DNA/system-prompts/{claude,gemini,jules}
 When starting new work:
 ```bash
 # Always start here for organization
-cd /mnt/scratch/projects/
+cd /home/evo/projects/
 
 # Platform work
 cd 01_Platform/evolution-3.1/
@@ -200,7 +200,7 @@ cd 04_Intelligence/gemini-workspace/
 
 If you create a new Git repo:
 ```bash
-cd /mnt/scratch/projects/
+cd /home/evo/projects/
 
 # Clone to root
 git clone https://github.com/you/new-repo.git
@@ -213,7 +213,7 @@ ln -s ../new-repo 01_Platform/new-project
 
 When you establish a new pattern:
 ```bash
-cd /mnt/scratch/projects/00_DNA/
+cd /home/evo/projects/00_DNA/
 # Document it in appropriate subfolder
 ```
 
@@ -237,7 +237,7 @@ cd /mnt/scratch/projects/00_DNA/
 
 If you ever want to undo:
 ```bash
-cd /mnt/scratch/projects/
+cd /home/evo/projects/
 
 # Delete numbered folders (just symlinks and empty dirs)
 rm -rf 01_Platform 02_Content_Factory 03_Tools 04_Intelligence _scratch
@@ -259,10 +259,10 @@ But you won't need to - this structure is solid!
 
 ## Resources
 
-- **Master Config:** `/mnt/scratch/projects/00_DNA/build-philosophy/Master_Config_2026.md`
-- **DNA README:** `/mnt/scratch/projects/00_DNA/README.md`
-- **Audit Script:** `/mnt/scratch/projects/00_DNA/workflows/audit_jules_repos.sh`
-- **Migration Plan:** `/mnt/scratch/projects/00_DNA/workflows/MIGRATION_STRATEGY.md`
+- **Master Config:** `/home/evo/projects/00_DNA/build-philosophy/Master_Config_2026.md`
+- **DNA README:** `/home/evo/projects/00_DNA/README.md`
+- **Audit Script:** `/home/evo/projects/00_DNA/workflows/audit_jules_repos.sh`
+- **Migration Plan:** `/home/evo/projects/00_DNA/workflows/MIGRATION_STRATEGY.md`
 
 ---
 

@@ -6,7 +6,7 @@ echo "Cloning Missing Jules Repositories"
 echo "=========================================="
 echo ""
 
-BASE_DIR="/mnt/scratch/projects"
+BASE_DIR="/home/evo/projects"
 cd "$BASE_DIR" || exit 1
 
 echo "🔍 Checking for missing repos..."

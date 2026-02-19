@@ -9,7 +9,7 @@ echo "Evolution Stables - Comprehensive Audit"
 echo "=========================================="
 echo ""
 
-BASE="/mnt/scratch/projects"
+BASE="/home/evo/projects"
 cd "$BASE" || exit 1
 
 # ============================================
@@ -94,11 +94,11 @@ echo "🤖 PART 4: Models Directory"
 echo "-----------------------------------"
 echo ""
 
-if [ -d "/mnt/scratch/models" ]; then
-    echo "✅ /mnt/scratch/models exists"
+if [ -d "/home/evo/models" ]; then
+    echo "✅ /home/evo/models exists"
     echo ""
     echo "Subdirectories:"
-    ls -d /mnt/scratch/models/*/ 2>/dev/null | while read dir; do
+    ls -d /home/evo/models/*/ 2>/dev/null | while read dir; do
         dirname=$(basename "$dir")
         size=$(du -sh "$dir" 2>/dev/null | cut -f1)
         file_count=$(find "$dir" -type f | wc -l)
@@ -110,7 +110,7 @@ if [ -d "/mnt/scratch/models" ]; then
         fi
     done
 else
-    echo "❌ /mnt/scratch/models missing"
+    echo "❌ /home/evo/models missing"
 fi
 
 echo ""

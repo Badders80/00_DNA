@@ -33,7 +33,7 @@ Accent: #00D4AA (Racing energy)
 - [ ] Clearspace rules
 - [ ] Approved variations (light/dark backgrounds)
 
-**Where to put it:** `/mnt/scratch/projects/00_DNA/brand-identity/visual/logos/`
+**Where to put it:** `/home/evo/projects/00_DNA/brand-identity/visual/logos/`
 
 ### Typography
 
@@ -125,7 +125,7 @@ Accurate? Too narrow? Missing segments?
 - [ ] Other press mentions?
 - [ ] Awards or recognition?
 
-**Where to put it:** `/mnt/scratch/projects/00_DNA/brand-identity/press/`
+**Where to put it:** `/home/evo/projects/00_DNA/brand-identity/press/`
 
 ### Dubai Racing Club Partnership
 
@@ -208,7 +208,7 @@ Accurate? Too narrow? Missing segments?
 - [ ] Press kit
 
 **Should we move these into:**
-`/mnt/scratch/projects/00_DNA/brand-identity/visual/`?
+`/home/evo/projects/00_DNA/brand-identity/visual/`?
 
 ---
 
@@ -261,7 +261,7 @@ Accurate? Too narrow? Missing segments?
 - [ ] **Legal disclaimers** (what must be on website?)
 - [ ] **Investor protection requirements**
 
-**Where to put it:** `/mnt/scratch/projects/00_DNA/legal/` (new folder)
+**Where to put it:** `/home/evo/projects/00_DNA/legal/` (new folder)
 
 ---
 
@@ -276,9 +276,9 @@ Accurate? Too narrow? Missing segments?
 
 **Recovery command:**
 ```bash
-cd /mnt/scratch/projects/Evolution-3.1
+cd /home/evo/projects/Evolution-3.1
 git log --all --full-history -- "BRAND_GUIDELINES.md"
-git show <commit-hash>:BRAND_GUIDELINES.md > /mnt/scratch/projects/00_DNA/brand-identity/RECOVERED_BRAND_GUIDELINES.md
+git show <commit-hash>:BRAND_GUIDELINES.md > /home/evo/projects/00_DNA/brand-identity/RECOVERED_BRAND_GUIDELINES.md
 ```
 
 Want me to try recovering these?
