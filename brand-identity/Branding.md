@@ -336,22 +336,14 @@ All combinations meet WCAG AA minimum (4.5:1 contrast ratio).
 
 ### Typography
 
-Primary interface and editorial: Inter (Sans-serif)
+Primary interface and editorial: Geist Sans
 
-  Light (300):    Hero statements, display copy
-  Regular (400):  Body text, descriptions
-  Medium (500):   Subheadings
-  Semi-Bold (600): Labels, navigation, CTAs
+  Standard:       Geist Sans (Evolution-3.1 spec)
+  Legacy/Tooling: Inter (Sans-serif)
+  Data/Protocol:  Geist Mono
 
-Data and protocol: Geist Mono
-
-  Use for: Financial data, contract hashes, timestamps,
-           blockchain references, technical metrics
-  Size:    0.875rem standard
-
-Note: Geist Mono is the Evolution-3.1 web platform spec.
-Evolution_Studio Streamlit UI uses Inter throughout — maintain
-consistency on internal tooling.
+  Weights: 300 (Light), 400 (Regular), 600 (Semi-Bold)
+  Authority: See `00_DNA/brand-identity/TYPOGRAPHY_SYSTEM.md` for full specs.
 
 ### Type Scale
 

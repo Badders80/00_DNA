@@ -272,7 +272,7 @@ Accurate? Too narrow? Missing segments?
 **Can we recover from Git history?**
 - [ ] BRAND_GUIDELINES.md (was in Evolution-3.1)
 - [ ] TYPOGRAPHY_SYSTEM.md (was in Evolution-3.1)
-- [ ] SEO_GUIDE.md (was in Evolution-3.1)
+- [x] SEO_GUIDE.md (Recovered/Synthesized in 00_DNA/content-strategy/SEO/)
 
 **Recovery command:**
 ```bash

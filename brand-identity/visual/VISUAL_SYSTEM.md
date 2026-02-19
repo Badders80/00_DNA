@@ -45,9 +45,10 @@ Info:                   #3B82F6
 
 ## 🖋️ Typography
 
-**Primary: Inter** (Modern, professional)  
-**Weights:** 400, 500, 600, 700  
-**Scale:** 48px / 36px / 24px / 16px / 14px
+**Primary: Geist Sans** (Modern, data-forward, high-performance)  
+**Secondary: Inter** (Legacy compatibility)  
+**Monospace: Geist Mono** (Technical data/intelligence)  
+**Authority:** See `00_DNA/brand-identity/TYPOGRAPHY_SYSTEM.md` for full specs.
 
 ---
 
