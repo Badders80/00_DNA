@@ -19,6 +19,15 @@ When ANY of the following occur, STOP immediately and get explicit user confirma
 ### E-02: Mode Confirmation Required
 Before switching modes (review→build, plan→execute): "Switching to [mode]. Confirm: Y/N"
 
+### E-03: RESEARCH BEFORE BUILD (Anti-Reinvention Rule)
+Before building ANY feature:
+1. Search for existing solutions (GitHub, npm, etc.)
+2. Check starred repos, n8n workflows, DNA skills
+3. If solution exists: Adapt > Integrate > Build from scratch
+4. Document why custom build was chosen if no existing solution used
+
+**Violation of this rule = stop, research, replan.**
+
 ## Default Behaviour
 - [C-01] Prefer surgical patches over architectural improvements.
 - [C-02] Minimal diffs; no refactors unless explicitly asked.
