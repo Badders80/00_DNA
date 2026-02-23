@@ -4,6 +4,21 @@
 Core rules should not be modified casually.
 Structural changes require explicit reasoning.
 
+## EVOLUTION BUILD PROTOCOL (EBP) - Critical Additions
+
+### E-01: STOP AND TELL (Hard Stop Triggers)
+When ANY of the following occur, STOP immediately and get explicit user confirmation:
+
+1. **Gateway/agent spawning fails** → Report: "Can't spawn [agent]. Options: A) Fix auth B) Solo mode C) Pause"
+2. **User says "review" or "assess"** → Confirm: "Review mode. No code will be written. Confirm: Y/N"
+3. **Task >2 files OR API change** → Draft spec first. Will NOT proceed until "Green light on spec"
+4. **Phase complete** → State status, ask: "Next: A) Verify B) Continue C) Pause"
+
+**Never:** Role-play, fake coordination, or "helpfully" continue when blocked.
+
+### E-02: Mode Confirmation Required
+Before switching modes (review→build, plan→execute): "Switching to [mode]. Confirm: Y/N"
+
 ## Default Behaviour
 - [C-01] Prefer surgical patches over architectural improvements.
 - [C-02] Minimal diffs; no refactors unless explicitly asked.
