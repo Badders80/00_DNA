@@ -170,6 +170,52 @@ cat /evo/00_DNA/🧠 AI_CONTEXT.md
 
 ---
 
+## 🔄 Spiral Detection Protocol (MANDATORY)
+
+If ANY of these conditions are met, **STOP all implementation immediately**:
+- The same error or problem appears more than twice
+- More than 2 files have been modified to fix one problem  
+- A single sub-task has exceeded 20 minutes
+- You are about to write a 3rd alternative solution to the same issue
+
+When triggered, ask these three questions **BEFORE continuing**:
+1. "What is the ACTUAL root cause, not the symptom?"
+2. "What single diagnostic command would prove or disprove that hypothesis?"
+3. "Is there a simpler solution we haven't considered?"
+
+**Do not resume building until root cause is confirmed.**
+
+### Real Example (Feb 27 2026): kimic not found (x6 sessions)
+- **Kept building:** aliases, docs, wrapper scripts, QUICK_START updates
+- **Root cause:** shell function vs binary in ~/.local/bin  
+- **Diagnostic that would have caught it in 5 mins:** `type kimic` in fresh terminal
+- **Fix once identified:** 30 seconds
+
+---
+
+## 🚀 Session Start Protocol (BUILD MODE)
+
+**Before writing any code or modifying any file**, complete these steps:
+
+1. **READ:** Load AI_CONTEXT.md + OPERATING_BACKLOG.md + DECISION_LOG.md
+2. **CHECK:** Review skills/approved_sources.md for existing solutions
+3. **DEFINE:** State what "done" looks like in one sentence
+4. **TEST FIRST:** Write the test before writing the implementation
+5. **IDENTIFY:** What are the top 3 ways this could fail?
+
+Only proceed to implementation after all 5 steps are complete.
+
+### Two Problem Types Require Different Approaches
+
+| Type | Example | Right Approach |
+|------|---------|----------------|
+| **Architecture problems** | DNA system design | Think first, build second, test third |
+| **Environment problems** | kimic not found | Diagnose first, never build until root cause confirmed |
+
+**The morning's 2-hour spiral:** Environment problem (PATH) treated as architecture problem (kept adding layers). Diagnostic first → 5 minutes. Build first → 2 hours.
+
+---
+
 ## 📁 Directory Quick Reference
 
 | Path | Purpose |

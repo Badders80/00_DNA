@@ -554,6 +554,66 @@ kimic
 
 ---
 
+## 2026-02-27: Complete AI Tool Wrapper Family
+
+### Decision
+Build wrappers for ALL AI tools in the stack: Kimi, Claude, Aider, Gemini, Kilo.
+
+### Context
+User has multiple AI tools but only Kimi had a DNA wrapper. Each tool needs its own "read before we start" trigger.
+
+### Decision Details
+
+**New Wrappers Added:**
+
+| Command | Tool | Method | Status |
+|---------|------|--------|--------|
+| `kimic` | Kimi CLI | Pipes DNA as first message | ✅ Already done |
+| `claudec` | Claude CLI | System prompt injection | ✅ Already done |
+| `aidere` | Aider | `--read` flag | ✅ Already done |
+| `geminic` | Gemini CLI | `GEMINI_SYSTEM_MD` env var | ✅ **NEW** |
+| `kiloc` | Kilo Code CLI | Context file injection | ✅ **NEW** |
+| `dna-context` | Any tool | Clipboard/pipe output | ✅ Already done |
+
+**Implementation:**
+- Created `_scripts/geminic.sh` and `_scripts/kiloc.sh`
+- Installed to `~/.local/bin/`
+- Updated `evo-doctor.sh` to check all tools
+- Pushed to `evo-dotfiles` repo
+- Created `AI_TOOL_WRAPPERS.md` reference doc
+
+**Pattern:**
+1. Create wrapper script
+2. Install to `~/.local/bin/`
+3. Add check to `evo-doctor.sh`
+4. Update documentation
+
+### Usage
+
+```bash
+# Any AI tool - just add 'c' suffix
+kimic                    # Kimi with DNA
+claudec                  # Claude with DNA
+aidere                   # Aider with DNA
+geminic                  # Gemini with DNA
+kiloc                    # Kilo with DNA
+
+dna-context | xclip      # Any other tool
+```
+
+### Impact
+- ✅ Every AI tool in stack has DNA wrapper
+- ✅ Consistent pattern: `TOOLc` = tool with context
+- ✅ Easy to add new tools
+- ✅ All documented
+
+### Related Files
+- `_scripts/kimic.sh`, `claudec.sh`, `aidere.sh`, `geminic.sh`, `kiloc.sh`
+- `~/.local/bin/*` (installed wrappers)
+- `AI_TOOL_WRAPPERS.md` (complete reference)
+
+---
+
 ## 2026-02-27: Universal AI Tool DNA Integration
 
 ### Decision
