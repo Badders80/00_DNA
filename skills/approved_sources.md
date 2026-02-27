@@ -1,5 +1,11 @@
 # ✅ Approved Sources - Curated Tools & References
 
+> **⚠️ THIS IS THE SINGLE SOURCE OF TRUTH**
+> 
+> All GitHub repo references across DNA point here. Update this file when evaluating new tools.
+> 
+> **Starred repos:** https://github.com/Badders80?tab=stars
+
 **Principle:** Before building anything, check here first.  
 **Rule:** Adapt > Integrate > Build from scratch
 

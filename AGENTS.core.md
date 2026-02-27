@@ -21,9 +21,9 @@ Before switching modes (review→build, plan→execute): "Switching to [mode]. C
 
 ### E-03: RESEARCH BEFORE BUILD (Anti-Reinvention Rule)
 Before building ANY feature:
-1. Check `skills/approved_sources.md` - curated solutions
+1. Check `skills/approved_sources.md` - curated solutions (single source of truth for all repos)
 2. Search for existing solutions (GitHub, npm, etc.)
-3. Check starred repos, n8n workflows, DNA skills
+3. Check n8n workflows, DNA skills
 4. If solution exists: Adapt > Integrate > Build from scratch
 5. Document why custom build was chosen if no existing solution used
 

@@ -275,8 +275,8 @@ Create a curated registry of approved tools and repositories in DNA to enable th
 
 ### Context
 User has 100+ starred repos on GitHub but:
-- No central reference for "what's been vetted"
-- AI assistants don't know what's pre-approved
+- No central reference for "what's been vetted" → **SOLVED: skills/approved_sources.md is now single source of truth**
+- AI assistants don't know what's pre-approved → **SOLVED: All DNA files point to approved_sources.md**
 - Hard to remember why certain tools were chosen
 - Re-invention happens when knowledge isn't shared
 
@@ -284,9 +284,9 @@ User has 100+ starred repos on GitHub but:
 **Created:** `skills/approved_sources.md`
 
 **Structure:**
-- Organized by category (AI, Productivity, Architecture, etc.)
+- Organized by category (AI, Productivity, Architecture, Agent Orchestration, etc.)
 - Each entry: What it does, When to use, Why approved
-- Links to user's starred repos (github.com/Badders80?tab=stars)
+- Single source of truth: All DNA files reference this for repo listings
 - Anti-patterns section (what to avoid)
 
 **Integration:**

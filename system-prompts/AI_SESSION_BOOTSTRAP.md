@@ -58,14 +58,10 @@ All work must happen within these absolute paths:
 Check `00_DNA/` -> Check repo-local patterns -> Check Starred Repos -> Build Custom.
 
 ### **Starred Skills & Agents**
-- `sickn33/antigravity-awesome-skills` (800+ Claude Code skills)
-- `VoltAgent/awesome-claude-code-subagents` (Specialized task agents)
-- `OthmanAdi/planning-with-files` (Manus-style persistent planning)
+→ See `skills/approved_sources.md` for full curated list of agent skills and subagents
 
 ### **Automation & Reference**
-- `czlonkowski/n8n-mcp` (Let agents build n8n flows)
-- `google-gemini/cookbook` (Official Gemini API patterns)
-- `rowboatlabs/rowboat` (Multi-agent/Memory architecture)
+→ See `skills/approved_sources.md` for automation tools, cookbooks, and multi-agent platforms
 
 ---
 

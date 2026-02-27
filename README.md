@@ -125,10 +125,12 @@ Don't delete - move to `/graveyard/` with explanation of why it failed
 
 ## Philosophy Sources
 
-Inspired by:
-- **get-shit-done** (github.com/glittercowboy/get-shit-done) - Clear standards
-- **superpowers** (github.com/obra/superpowers) - Reusable agent configs
-- **awesome-claude-skills** (Composable skill patterns)
+Inspired by standards from `skills/approved_sources.md`:
+- **get-shit-done** - Clear standards
+- **superpowers** - Reusable agent configs
+- **awesome-claude-skills** - Composable skill patterns
+
+→ **Full list:** `skills/approved_sources.md` (single source of truth for all tools/repos)
 
 Core principle: **AI-agnostic, human-readable, action-oriented**
 
