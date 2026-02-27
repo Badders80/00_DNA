@@ -7,13 +7,16 @@
 
 ## 🚀 Quick Start (New Here?)
 
-**Read These First:**
-1. `/home/evo/projects/00_DNA/README.md` - What is DNA?
-2. `/home/evo/projects/00_DNA/QUICK_REFERENCE.md` - Daily commands
-3. `/home/evo/projects/00_DNA/build-philosophy/Master_Config_2026.md` - Hardware setup
+**For AI Assistants:**
+→ Start with `🧠 AI_CONTEXT.md` - Model-agnostic context loader
+
+**For Humans:**
+1. `/home/evo/00_DNA/README.md` - What is DNA?
+2. `/home/evo/00_DNA/QUICK_REFERENCE.md` - Daily commands
+3. `/home/evo/00_DNA/build-philosophy/Master_Config_2026.md` - Hardware setup
 
 **Then:**
-4. `/home/evo/projects/00_DNA/INFORMATION_GAPS.md` - Help fill this in!
+4. `/home/evo/00_DNA/INFORMATION_GAPS.md` - Help fill this in!
 
 ---
 
@@ -23,6 +26,13 @@
 
 | Document | Purpose | Status | Path |
 |----------|---------|--------|------|
+| **🧠 AI_CONTEXT.md** | Model-agnostic AI loader | ✅ Complete | `/00_DNA/🧠 AI_CONTEXT.md` |
+| **🧠 MEMORY_PROTOCOL.md** | How memory works | ✅ Complete | `/00_DNA/🧠 MEMORY_PROTOCOL.md` |
+| **SESSION_STARTER.md** | How to start AI sessions | ✅ Complete | `/00_DNA/SESSION_STARTER.md` |
+| **OPERATING_BACKLOG.md** | Current work & priorities | ✅ Complete | `/00_DNA/OPERATING_BACKLOG.md` |
+| **DECISION_LOG.md** | Why we made key choices | ✅ Complete | `/00_DNA/DECISION_LOG.md` |
+| **🐳 Docker Guide.md** | Docker management (simple!) | ✅ Complete | `/00_DNA/🐳 Docker Guide.md` |
+| **🛠️ Enhancements Guide.md** | Lightweight tools (FZF, Zoxide, etc.) | ✅ Complete | `/00_DNA/🛠️ Enhancements Guide.md` |
 | **README.md** | DNA philosophy & usage | ✅ Complete | `/00_DNA/README.md` |
 | **QUICK_REFERENCE.md** | Daily operations guide | ✅ Complete | `/00_DNA/QUICK_REFERENCE.md` |
 | **INFORMATION_GAPS.md** | What needs AB input | ⏳ Awaiting | `/00_DNA/INFORMATION_GAPS.md` |
@@ -101,7 +111,18 @@
 ```
 00_DNA/
 │
-├── README.md                          # Start here
+├── 🧠 AI_CONTEXT.md                   # AI context loader (model-agnostic)
+├── 🧠 MEMORY_PROTOCOL.md              # How the memory system works
+├── 🏠 Home.md                         # DNA home / entry point
+├── 🏗️ Build Rules.md                  # Immutable principles
+├── 🔐 Secrets Guide.md                # API key management
+├── ✈️ Travel Mode.md                  # Remote access guide
+├── 🐳 Docker Guide.md                 # Docker management (simple!)
+├── 🛠️ Enhancements Guide.md           # Lightweight tools setup
+├── SESSION_STARTER.md                 # How to start AI sessions
+├── OPERATING_BACKLOG.md               # Current work & priorities
+├── DECISION_LOG.md                    # Why we made key choices
+├── README.md                          # DNA philosophy & usage
 ├── INDEX.md                           # This file
 ├── QUICK_REFERENCE.md                 # Daily operations
 ├── INFORMATION_GAPS.md                # Needs your input
@@ -148,7 +169,7 @@
 
 ```bash
 # Search all DNA docs
-cd /home/evo/projects/00_DNA
+cd /home/evo/00_DNA
 grep -r "your search term" .
 
 # Search specific category
@@ -229,7 +250,7 @@ Documentation:        ███████████████████�
 ### How to Update DNA
 
 ```bash
-cd /home/evo/projects/00_DNA
+cd /home/evo/00_DNA
 
 # Edit relevant file
 nano brand-identity/BRAND_VOICE.md
@@ -275,7 +296,7 @@ git push origin main
 ### "I can't find [X]"
 
 1. Check this INDEX.md for location
-2. Use grep to search all DNA: `grep -r "keyword" /home/evo/projects/00_DNA`
+2. Use grep to search all DNA: `grep -r "keyword" /home/evo/00_DNA`
 3. Check if it's in INFORMATION_GAPS.md (not yet created)
 
 ### "DNA says [X] but I need to do [Y]"
@@ -341,7 +362,13 @@ git push origin main
 
 ```bash
 # Navigate to DNA
-cd /home/evo/projects/00_DNA
+cd /home/evo/00_DNA
+
+# Evo CLI (convenience wrapper)
+evo vault check      # Check API vault health
+evo vault edit       # Edit .env file
+evo doctor           # Run sanity check
+evo context          # Show AI context location
 
 # View this index
 cat INDEX.md
@@ -363,6 +390,9 @@ cat build-philosophy/Master_Config_2026.md
 
 # Daily audit
 ./workflows/audit_jules_repos.sh
+
+# AI context (model-agnostic)
+cat 🧠 AI_CONTEXT.md
 ```
 
 ---
@@ -383,4 +413,4 @@ cat build-philosophy/Master_Config_2026.md
 ---
 
 *Last Updated: 2026-01-27*  
-*Location: `/home/evo/projects/00_DNA/INDEX.md`*
+*Location: `/home/evo/00_DNA/INDEX.md`*

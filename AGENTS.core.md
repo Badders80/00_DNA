@@ -21,12 +21,28 @@ Before switching modes (review→build, plan→execute): "Switching to [mode]. C
 
 ### E-03: RESEARCH BEFORE BUILD (Anti-Reinvention Rule)
 Before building ANY feature:
-1. Search for existing solutions (GitHub, npm, etc.)
-2. Check starred repos, n8n workflows, DNA skills
-3. If solution exists: Adapt > Integrate > Build from scratch
-4. Document why custom build was chosen if no existing solution used
+1. Check `skills/approved_sources.md` - curated solutions
+2. Search for existing solutions (GitHub, npm, etc.)
+3. Check starred repos, n8n workflows, DNA skills
+4. If solution exists: Adapt > Integrate > Build from scratch
+5. Document why custom build was chosen if no existing solution used
 
 **Violation of this rule = stop, research, replan.**
+
+### E-04: CHECKPOINT & ROLLBACK
+Before heavy execution phases, create a quick checkpoint (e.g., `git commit --allow-empty -m "EBP checkpoint: pre-phase-X"` or a zip backup of key directories) to make rollback trivial if a fatal error cascades.
+
+### E-05: ERROR CLASSIFICATION & FEEDBACK
+When reading console output, explicitly categorize errors (e.g., "X11 fatal → graphics/driver issue", "npm ERR! → dep conflict") to feed patterns back into long-term memory for preemptive scanning.
+
+### E-06: DYNAMIC SPEC UPDATES
+Allow lightweight spec amendments mid-execution if existing partial implementations are discovered, maintaining momentum without losing discipline.
+
+### E-07: METRICS / POST-MORTEM LITE
+After verification, log 2-3 lines detailing time taken, API costs (if applicable), and surprises encountered to continually optimize the EBP.
+
+### E-08: AGENT HANDOFF BOUNDARIES
+Define explicit data handoff formats (e.g., strict JSON schemas) when delegating tasks to other agents (e.g., Firecrawl) to reduce misinterpretation during result ingestion.
 
 ## Default Behaviour
 - [C-01] Prefer surgical patches over architectural improvements.
