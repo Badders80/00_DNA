@@ -45,6 +45,7 @@
 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | Complete Claude Code configs | Setting up Claude agent properly |
 | [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | 900+ battle-tested skills | Before building any skill from scratch |
 | [czlonkowski/n8n-skills](https://github.com/czlonkowski/n8n-skills) | n8n workflows for Claude Code | n8n workflow automation |
+| [Zie619/n8n-workflows](https://github.com/Zie619/n8n-workflows) | 4,343+ searchable n8n workflows + AI-BOM security scanner | Finding n8n workflow templates, security auditing |
 
 ---
 

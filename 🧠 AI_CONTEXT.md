@@ -216,6 +216,36 @@ Only proceed to implementation after all 5 steps are complete.
 
 ---
 
+## 📡 Trigger Phrases (Execute Immediately, No Confirmation Needed)
+
+### "just added a new repo [URL]"
+When the user says this phrase, execute ALL of the following steps immediately:
+
+1. **FETCH:** Read the repo's README from the URL provided
+2. **ANALYSE:** Determine in one line — what it does and when to use it
+3. **CATEGORISE:** Find the right section in skills/approved_sources.md
+   (Agent Orchestration / CLI Tools / UI / Testing / Workflow / etc)
+4. **APPEND:** Add a new row to the correct table:
+   ```
+   | [repo-name](URL) | what it does | when to use it |
+   ```
+5. **COMMIT:**
+   ```bash
+   cd ~/00_DNA
+   git add skills/approved_sources.md
+   git commit -m "Add starred repo: [repo-name] via natural language intake"
+   git push
+   ```
+6. **CONFIRM:** Tell the user exactly what was added and where
+
+**Example trigger:**
+> "just added a new repo https://github.com/Zie619/n8n-workflows, review and commit the skills"
+
+**Expected response:**
+> "✅ Added n8n-workflows to Workflow Automation section of approved_sources.md — curated n8n workflow collection, use when building n8n automations. Committed to evo-brain."
+
+---
+
 ## 📁 Directory Quick Reference
 
 | Path | Purpose |
