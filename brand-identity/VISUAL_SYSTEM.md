@@ -1,3 +1,14 @@
+---
+doc_type: visual-system
+applies-to: [Evolution Stables, Evolution Intelligence]
+last_updated: 2026-02-28
+tags: [brand, visual, typography, colour]
+---
+
+## Applies To
+- Evolution Stables (Q7 phase): Navy/Teal palette, Geist Sans, Playfair
+- Evolution Intelligence (GTI phase): Deep charcoal, gold accent, Geist Mono
+
 # Evolution Stables - Visual Brand System
 
 **Version:** 1.0 (Draft - Awaiting AB Validation)  
@@ -59,3 +70,13 @@ Info:                   #3B82F6
 - [ ] Logo files location?
 
 **Full details in file, this is just a quick draft to keep moving!**
+---
+doc_type: visual-system
+applies-to: [Evolution Stables, Evolution Intelligence]
+last_updated: 2026-02-28
+tags: [brand, visual, typography, colour]
+---
+
+## Applies To
+- Evolution Stables (Q7 phase): Navy/Teal palette, Geist Sans, Playfair
+- Evolution Intelligence (GTI phase): Deep charcoal, gold accent, Geist Mono
