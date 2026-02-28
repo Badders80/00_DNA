@@ -26,7 +26,7 @@
 
 ### WSL2 Ubuntu 24.04
 - Primary development environment
-- Native ext4 storage: 500GB at `/mnt/native`
+- Native ext4 storage: /home/evo/projects
 
 ---
 
@@ -63,7 +63,7 @@
 
 ## Frameworks & Libraries
 
-### Frontend (Evolution-3.1)
+### Frontend (EvolutionPlatform)
 - Next.js 14 (App Router)
 - TypeScript
 - Tailwind CSS
@@ -98,11 +98,11 @@
 ├── 00_DNA/ # Standards & configs
 ├── projects/
 │ ├── .venv/ # Python virtual environment
-│ ├── Evolution-3.1/ # Next.js platform
-│ └── Asset_Generation/ # ComfyUI workflows
+│ ├── EvolutionPlatform/ # Next.js platform
+│ └── InfrastructureComfyUI/ # ComfyUI workflows
 
-/mnt/native/ # 500GB high-performance storage
-├── models/ # AI models
+/home/evo/models/ # AI models and high-performance storage
+├── checkpoints/ # Base models
 ├── comfyui_cache/ # Temp files
 ├── video_output/ # Generated content
 └── temp/ # Scratch space
@@ -119,18 +119,18 @@ text
 - Suitable for: Stable Diffusion, LTX-Video, Flux
 
 ### Storage Strategy
-- Source code: `~/projects/` (native ext4)
-- Large files: `/mnt/native/` (native ext4)
+- Source code: `/home/evo/projects/` (native ext4)
+- Large files: `/home/evo/models/` (native ext4)
 - Avoid: `/mnt/c/` or `/mnt/s/` for development (slow DrvFs bridge)
 
 ---
 
 ## Active Projects
 
-1. **Evolution-3.1** - Next.js platform (~/projects/Evolution-3.1)
+1. **EvolutionPlatform** - Next.js platform (~/projects/EvolutionPlatform)
    - Deployed: Vercel
    - CMS: Sanity Studio
-2. **Asset_Generation** - ComfyUI workflows (~/projects/Asset_Generation)
+2. **InfrastructureComfyUI** - ComfyUI workflows (~/projects/InfrastructureComfyUI)
 3. **00_DNA** - System standards (~/00_DNA)
 
 ---

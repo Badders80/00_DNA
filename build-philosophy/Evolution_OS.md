@@ -57,10 +57,10 @@ updating activeContext.md.
 
 /home/evo/projects/
 ├── 00_DNA/ # Source of truth (these docs)
-├── 01_Platform/ # Evolution-3.1 (main platform)
-├── 02_Content_Factory/ # GTI layer operations
+├── 01_Platform/ # EvolutionPlatform (main platform)
+├── 02_Content_Factory/ # EvolutionContent operations
 ├── 03_Tools/ # MCP servers, CLI utilities
-├── 04_Intelligence/ # Scout agents, Ollama, Gemini configs
+├── 04_Intelligence/ # EvolutionIntelligence, Ollama, Gemini configs
 └── 05_Archive/ # Cold storage
 
 ### Content Factory Structure (02_Content_Factory/)
@@ -76,7 +76,7 @@ updating activeContext.md.
 │ └── YYYY-MM-DD_VENUE_TYPE/
 ├── 04_exports/ # Final renders ("Winners Circle")
 ├── The_Stud/ # Archive of successful campaigns
-└── comfyui-main/ # Video generation engine
+└── InfrastructureComfyUI/ # Video generation engine
 
 ### File Naming Conventions
 

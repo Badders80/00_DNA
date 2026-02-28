@@ -1,6 +1,6 @@
 # Build Rule: Separation of Concerns
 
-**Golden Rule:** Infrastructure ≠ Intelligence ≠ Content
+**Golden Rule:** Content ≠ Intelligence ≠ Infrastructure ≠ External
 
 ---
 
