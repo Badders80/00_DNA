@@ -1,5 +1,12 @@
 # 📋 Operating Backlog - Evolution Stables
 
+### 2026-02-28 - MD Cleanup Sprints 1+2 ✅
+**Worked on:** Full .md file audit and mechanical cleanup
+**Progress:** 210 → 177 active project .md files. Archived 00_DNA dead weight (12 files) + Evolution_Studio completion receipts (15 files). Git tagged v1.0-pre-cleanup as rollback point.
+**Blockers:** None
+**Next:** Sprint 3 (brand consolidation - 45 min Obsidian session, manual merge of 9 brand files → 2) → Sprint 4 (check Evolution_Platform/memory-bank age) → Projects/ deep audit (seo-baseline + Evolution_Command/docs)
+
+
 **Current Status:** Post-Consolidation (Phase 6 Complete)  
 **Last Updated:** 2026-02-27  
 **Next Review:** Weekly or as needed
