@@ -5,6 +5,50 @@
 
 ---
 
+## 2026-02-28: Build Philosophy Canonicalization
+
+### Decision
+Canonicalize project names, storage paths, and layer terminology across all build-philosophy documents and core DNA files to eliminate naming drift and path inconsistencies.
+
+### Context
+- Multiple DNA build-philosophy docs had minor naming and path drift.
+- Old references existed to `evolution-studios-engine`, `evolution-content-engine`, `01_Platform`, and `/mnt/native`.
+- The safe-path standard and four-layer architecture were already defined elsewhere in DNA but not applied consistently.
+
+### Decision Details
+**Project Naming Alignment:**
+- Replaced `evolution-studios-engine` with `EvolutionStudio`.
+- Replaced `evolution-content-engine` with `EvolutionContent`.
+- Replaced `01_Platform`, `02_Content_Factory`, `04_Intelligence` with `EvolutionPlatform`, `EvolutionContent`, `EvolutionIntelligence` where they refer to current repos.
+- Kept `Evolution-3.1` only when referring to the historical codebase or Git history.
+
+**Safe-Path Storage Alignment:**
+- Confirmed the canonical safe-path standard:
+  - `/home/evo/projects` – all active repos.
+  - `/home/evo/models` – all model files and weights.
+  - `/home/evo/00_DNA` – source-of-truth docs.
+- Removed legacy references to `/mnt/native` and 500GB Ext4 volumes from `Tech_Stack_2026.md`.
+- Updated all examples to assume the direct bind-mount of the Samsung 990 PRO into `/home/evo/`.
+
+**Layer Naming Standardization:**
+- Standardized the architecture language to four explicit layers: **Content / Intelligence / Infrastructure / External**.
+- Updated `DECISION_LOG.md`, `OPERATING_BACKLOG.md`, `SEPARATION_OF_CONCERNS.md`, and related build-philosophy docs to use this four-layer stack consistently.
+
+### Impact
+- ✅ Build philosophy is now 100% aligned with actual filesystem layout and repo structure.
+- ✅ Removes ambiguity for agents and humans about where code, models, and DNA live.
+- ✅ Ensures future architecture and tooling decisions use the same four-layer and safe-path vocabulary.
+
+### Related Files
+- `00_DNA/build-philosophy/ARCHITECTURE_STRATEGY.md`
+- `00_DNA/build-philosophy/Evolution_OS.md`
+- `00_DNA/build-philosophy/Tech_Stack_2026.md`
+- `00_DNA/DECISION_LOG.md`
+- `00_DNA/OPERATING_BACKLOG.md`
+- `00_DNA/build-philosophy/SEPARATION_OF_CONCERNS.md`
+
+---
+
 ## 2026-02-27: Model-Agnostic Memory System
 
 ### Decision
@@ -70,7 +114,7 @@ Consolidate scattered projects into 4-layer architecture with central vault.
 ```
 
 **Key Principles:**
-1. Infrastructure ≠ Intelligence ≠ Content (strict separation)
+1. Content ≠ Intelligence ≠ Infrastructure ≠ External (strict separation)
 2. One vault (`/evo/.env`) symlinked by all projects
 3. DNA is source of truth (standards live there, not in projects)
 
