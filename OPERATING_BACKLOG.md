@@ -108,41 +108,16 @@ Created DNA loaders for ALL AI tools:
 
 ---
 
-### 2026-02-27: Memory Protocol Tests #4-6 - CRITICAL DISCOVERY
-**Tests:** User ran additional tests to understand the trigger mechanism
-
-| Test | Prompt | Result |
-|------|--------|--------|
-| TEST #4 | "how about now?" | 🔴 Failed |
-| TEST #5 | "what were we **working on**?" | 🟢 Passed |
-| TEST #6 | "do you **remember**... **talking about**?" | 🔴 Failed |
-
-**🎯 BREAKTHROUGH DISCOVERY:**
-
-Kimi's DNA-reading behavior is **PROMPT-DEPENDENT**, not session-dependent!
-
-**What triggers DNA reading:**
-- Work/project keywords: "working on", "backlog", "focus", "project"
-- File references: "check OPERATING_BACKLOG.md"
-- Task language: "continue", "status", "progress"
-
-**What does NOT trigger DNA reading:**
-- Social/chat keywords: "remember", "talking about", "recall"
-- Vague prompts: "how about now?"
-- Memory language: "previous conversation", "last time"
-
-**Why this happens:**
-Kimi uses pattern matching to decide behavior. Social prompts trigger conversational responses. Work prompts trigger file exploration and context gathering.
-
-**The Fix:**
-Users must use **work-focused vocabulary** in their first prompt, OR use `kimic` alias which forces the context load.
-
-**Updated Recommendations:**
-1. **Always use `kimic`** (enforces context load via explicit prompt)
-2. **If using plain `kimi`**, first prompt must include work keywords
-3. **Avoid social prompts** like "do you remember?" - they fail the protocol
-
-**Status:** 🟢 **PROTOCOL UNDERSTOOD** - Prompt engineering required
+### 2026-02-27: Phase 6 Deep-Dive & Infrastructure Consolidation
+**Worked on:** Audit of Phase 6 consolidation, unification of LLM infrastructure, and removal of orphan folders.
+**Progress:** 
+- ✅ Audited the "Infrastructure ≠ Intelligence ≠ Content" separation (90% solid).
+- ✅ Consolidated `local-llm` and `Local_LLM_2` into `Infrastructure/Evolution_LLM`.
+- ✅ Verified master vault symlinks are active across all core projects.
+- ✅ Moved redundant root-owned shell folders (`Evolution-Content-Factory`, `n8n`, etc.) to `_archive/sudo_cleanup_required/` for manual deletion.
+- ✅ Updated `PROJECTS_INDEX.md` and `FINAL_STRUCTURE.md` to reflect the clean state.
+**Blockers:** None.
+**Next:** Phase 5 - Evolution_Studio consolidation.
 
 ### 2026-02-27: Empty Critical Folders Fixed
 **Issue:** Sweep found empty folders that could cause failures:

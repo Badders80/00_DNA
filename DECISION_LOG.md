@@ -795,33 +795,36 @@ Empty folders create ambiguity:
 
 ---
 
-## Template for New Decisions
-
-```markdown
-## YYYY-MM-DD: [Decision Title]
+## 2026-02-27: Infrastructure & Content Consolidation (Final Polish)
 
 ### Decision
-[What was decided]
+Unify all LLM-related infrastructure into `projects/Infrastructure/Evolution_LLM` and remove redundant "drift" folders from the `projects/` root.
 
 ### Context
-[What problem were we solving]
+Post-Phase 6, several inconsistencies remained:
+- Two LLM folders: `local-llm` (legacy GLM-4) and `Local_LLM_2` (active hybrid orchestrator).
+- Three redundant shell folders: `Evolution-Content-Factory`, `evolution-content-engine`, and `n8n`.
+- Confusion regarding the purpose of local LLMs vs. Cloud APIs.
 
 ### Decision Details
-[How we implemented it]
+**Implementation:**
+- **Evolution_LLM:** Merged `Local_LLM_2` (orchestrator code) with `local-llm` (local model weights). The system now prioritizes a Hybrid Cloud path (Groq/Gemini) but maintains GLM-4 as a local fallback for privacy and cost control.
+- **Surgical Cleanup:** Identified that `Evolution_Content` had successfully absorbed the logic of the "Factory" and "Engine" shells. These shells were moved to `_archive/sudo_cleanup_required/`.
+- **Active Path:** `projects/External/N8N` confirmed as the active N8N instance.
 
 **Rejected Alternatives:**
-- ❌ [Alternative 1] (why rejected)
-- ❌ [Alternative 2] (why rejected)
+- ❌ Delete local models entirely (rejected: local LLMs are vital for privacy/offline fallbacks).
+- ❌ Keep separate folders (rejected: creates "Intelligence Drift").
 
 ### Impact
-- ✅ [Positive impact]
-- ⚠️ [Trade-off or risk]
+- ✅ Single source of truth for LLM infrastructure.
+- ✅ Root `projects/` directory is now clean of redundant shells.
+- ✅ Clearer distinction between "Cloud Primary" and "Local Fallback" workflows.
 
 ### Related Files
-- [Link to relevant files]
-
----
-```
+- `projects/Infrastructure/Evolution_LLM`
+- `PROJECTS_INDEX.md`
+- `FINAL_STRUCTURE.md`
 
 ---
 
