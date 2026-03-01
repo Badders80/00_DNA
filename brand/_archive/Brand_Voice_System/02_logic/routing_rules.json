@@ -1,0 +1,21 @@
+{
+  "routing_rules": [
+    {
+      "trigger": "author == 'alex'",
+      "module": "founder_personal"
+    },
+    {
+      "trigger": "context == 'race_activity'",
+      "module": "racing_updates"
+    },
+    {
+      "trigger": "context == 'governance_structure_risk'",
+      "module": "regulatory_business"
+    },
+    {
+      "trigger": "context == 'public_description'",
+      "module": "brand_corporate"
+    }
+  ],
+  "override_logic": "If more than one applies, choose the most constrained voice."
+}
