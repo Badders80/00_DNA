@@ -11,6 +11,66 @@
 
 ---
 
+## ⭐ Starred Repo Review Workflow
+
+When operator says: `I've added this new repo to my starred list in GitHub, please review`
+
+Treat this as a **review request**, not an install instruction.
+
+### 1) Inputs
+- GitHub URL or `owner/repo`
+- Review focus (security, architecture, readiness, etc.)
+- Depth (`quick scan` or `deep review`)
+
+### 2) Analysis
+- Read README and examples: purpose, scope, maturity
+- Inspect project structure: source layout, tests, config, CI
+- Check maintenance signals: commit recency, open issues, release cadence, license
+- Compare against this approved-sources list:
+  - Does it duplicate an already approved tool?
+  - Does it violate build or safety constraints?
+- Check `TECH_RADAR.md` before repeating an evaluation
+
+### 3) Output
+- Findings ordered by severity (critical -> minor)
+- File/area pointers for where concerns were found
+- Recommendation aligned to radar statuses:
+  - `Reject`, `Assess`, `Trial`, or `Adopt`
+- If useful, add/update this file with category + rationale + date
+
+### 4) Default Rule
+- Do not adopt directly from a star.
+- New stars enter `Assess` first unless already equivalent to an adopted tool.
+
+### 5) Star Sync
+- Run: `node scripts/sync_starred_repos.mjs`
+- Registry outputs:
+  - `skills/starred_repo_registry.json` (canonical, editable for statuses/notes)
+  - `skills/starred_repo_registry.md` (human-readable snapshot)
+- Script behavior:
+  - Pulls GitHub stars for `Badders80` (override with `GITHUB_STARS_USER`)
+  - Adds unseen repos as `Assess`
+  - Preserves manual status/category/notes for existing repos
+
+---
+
+## 🎯 Current Lean-In Set (Build Direction)
+
+These are the strongest repos to lean on first for your current stack.
+
+| Repository | Direction | Why |
+|------------|-----------|-----|
+| [snarktank/antfarm](https://github.com/snarktank/antfarm) | Lean for multi-agent orchestration | Best fit for repeatable OpenClaw-centered build workflows |
+| [gsd-build/get-shit-done](https://github.com/gsd-build/get-shit-done) | Lean for scoped execution | Strong discuss -> plan -> execute structure for long coding tasks |
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | Keep as core runtime | Foundation layer already aligned with agent-heavy workflow |
+| [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | Lean for skill reuse | Reduces custom skill reinvention |
+| [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills) | Lean for battle-tested skill patterns | Large practical skill corpus for rapid execution |
+| [czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp) + [czlonkowski/n8n-skills](https://github.com/czlonkowski/n8n-skills) | Lean for automation bridge | Strongest direct path from AI workflow design to n8n execution |
+| [tobi/qmd](https://github.com/tobi/qmd) | Lean for local knowledge retrieval | Good fit for local-first DNA search and context lookup |
+| [unslothai/unsloth](https://github.com/unslothai/unsloth) | Lean for local model tuning | Best fit for constrained VRAM model iteration |
+
+---
+
 ## 🎯 How to Use This File
 
 1. **Before starting a new feature:** Search this file for related solutions

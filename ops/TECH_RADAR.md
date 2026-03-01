@@ -3,6 +3,7 @@
 **Purpose:** Log, evaluate, and track decisions about new tools so we don't keep having the same conversations.
 
 **Rule:** If it's not in here, we haven't properly evaluated it yet.
+**Assistant rule:** Check this file and `skills/approved_sources.md` before recommending or re-evaluating tools.
 
 ---
 

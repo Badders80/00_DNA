@@ -1,15 +1,27 @@
-# 🔐 Vault Directory
+# Vault Folder: Secret Management Standards
 
-**Purpose:** Documentation and examples for the Evolution Stables secret management system.
+**Purpose:** Defines the standards, schemas, and verification logic for the Evolution Stables "One Vault" system. This folder contains the blueprints for how secrets are managed, without ever containing the secrets themselves.
 
-**Master Vault Location:** `/evo/.env`
+**Key Rules:**
+- **Master Vault:** The only source of truth for actual keys is `/home/evo/.env`.
+- **Symlinking:** All projects must symlink to the master vault (`ln -s /home/evo/.env .env`).
+- **No Commits:** `.env` files are hard-blocked by git hooks and `.gitignore`.
+- **Validation:** Use `evo vault validate` to check if your environment matches the schema defined here.
 
-**Note:** This folder is for vault-related documentation only. The actual secrets live in the root `.env` file.
+**Contents:**
+- `README.md`: This standard definition.
+- `env.schema`: The canonical list of required keys.
+- `env.template`: A safe, value-free template for new environments.
 
-## Quick Reference
+**Developer Standards:**
+- **env.py Pattern:** Every Python project should include an `env.py` that validates the existence of required keys from the schema at startup.
+- **Fail Loudly:** If a key is missing, the application must print a clear error and exit(1).
 
-- Check vault health: `evo vault check`
-- Edit vault: `evo vault edit`
-- Validate keys: `evo vault validate`
+**Quick Commands:**
+- `evo vault check`: Health check of all project symlinks.
+- `evo vault edit`: Securely open the master vault.
+- `evo vault validate`: Compare current vault against the schema.
 
-See [🔐 Secrets Guide.md](../🔐 Secrets Guide.md) for full documentation.
+**Navigation Tip:** For the human-friendly guide on how to rotate keys or add new services, see `_obsidian/🔐 Secrets Guide.md`.
+
+**Last Updated:** 2026-03-01

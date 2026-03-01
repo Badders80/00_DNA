@@ -1,14 +1,14 @@
 ---
-doc_type: brand-voice-q7
+doc_type: brand-voice-conversion
 entity: Evolution Stables
 last_updated: 2026-02-28
-audience: Q7 Phase (ownership-ready, sophisticated, investor mindset)
-tags: [brand, q7, ownership, syndication, fight-club]
+audience: Ownership-ready audience (sophisticated, investor mindset)
+tags: [brand, conversion, ownership, syndication, fight-club]
 ---
 
 ## What This Is
 Evolution Stables is the ownership platform.
-Audience: people in the Q7 phase — mature, sophisticated, ready to belong.
+Audience: ownership-ready audience — mature, sophisticated, ready to belong.
 They arrived here via Evolution Intelligence. They already understand racing.
 
 ## Fight Club Rule — Non-Negotiable
@@ -276,19 +276,3 @@ Evolution isn't iteration—it's transformation.
 ---
 
 **This document guides all content creation: website copy, press releases, social media, Bloomberg-style racing intelligence, and AI-generated content.**
----
-doc_type: brand-voice-q7
-entity: Evolution Stables
-last_updated: 2026-02-28
-audience: Q7 Phase (ownership-ready, sophisticated, investor mindset)
-tags: [brand, q7, ownership, syndication, fight-club]
----
-
-## What This Is
-Evolution Stables is the ownership platform.
-Audience: people in the Q7 phase — mature, sophisticated, ready to belong.
-They arrived here via Evolution Intelligence. They already understand racing.
-
-## Fight Club Rule — Non-Negotiable
-We do not sell ownership. We sell belonging to a sophisticated moneyball group.
-The ownership product is the reward. It is never the headline.

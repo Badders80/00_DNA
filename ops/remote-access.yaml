@@ -1,0 +1,55 @@
+# ═══════════════════════════════════════════════════════════
+# REMOTE ACCESS CONFIGURATION
+# For travel: PC stays on, laptop connects remotely
+# ═══════════════════════════════════════════════════════════
+
+pc_server:
+  # Your PC details (always-on heavy lifter)
+  host: localhost           # Change to your PC's IP/domain when remote
+  ssh_port: 22
+  
+  # Access methods
+  methods:
+    - name: "OpenClaw Telegram"
+      type: telegram_bot
+      description: "Quick commands via phone/any device"
+      best_for: [status_checks, quick_deploys, monitoring]
+      
+    - name: "Kimi K2 (40GB)"
+      type: cloud_ai
+      description: "Remote AI with huge context"
+      best_for: [large_refactors, code_review, deep_analysis]
+      context_window: "40GB"
+      
+    - name: "code-server (optional)"
+      type: web_ide
+      port: 8080
+      description: "Full VS Code in browser"
+      best_for: [emergency_edits, light_dev]
+
+laptop_client:
+  # Thin client setup - minimal local install
+  requirements:
+    - ssh
+    - telegram (for OpenClaw)
+    - browser
+    - optional: code-server for web editing
+
+work_modes:
+  # Choose your adventure while traveling
+  
+  mode_light:
+    description: "Just monitoring, no dev"
+    tools: [telegram_openclaw]
+    data_sync: none
+    
+  mode_medium:
+    description: "Review, light edits, analysis"
+    tools: [telegram_openclaw, kimi_k2_40gb, code_server]
+    data_sync: pull_only
+    
+  mode_heavy:
+    description: "Full dev (rare while traveling)"
+    tools: [all]
+    data_sync: bidirectional
+    note: "Use sparingly - requires good connection"

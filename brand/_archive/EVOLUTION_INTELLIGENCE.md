@@ -1,14 +1,14 @@
 ---
-doc_type: brand-voice-gti
+doc_type: brand-voice-awareness
 entity: Evolution Intelligence
 last_updated: 2026-02-28
-audience: GTI Phase (aspirational, pre-ownership, racing-curious)
-tags: [brand, gti, faceless, tiktok, intelligence]
+audience: Aspirational pre-ownership audience (racing-curious)
+tags: [brand, awareness, faceless, tiktok, intelligence]
 ---
 
 ## What This Is
 Evolution Intelligence is the faceless data channel.
-Audience: people in the GTI phase — racing-curious, not yet ownership-ready.
+Audience: aspirational pre-ownership audience — racing-curious, not yet ownership-ready.
 They mature into Evolution Stables participants. We do not rush this.
 
 ## The Wall — Non-Negotiable
@@ -18,12 +18,12 @@ They mature into Evolution Stables participants. We do not rush this.
 - The algorithm makes the connection. We never do.
 
 # Evolution_Content_Factory.md
-# The GTI Layer — Evolution Intelligence Handbook
+# The Awareness Layer — Evolution Intelligence Handbook
 
 Version: 2026.2
 Status: Canonical
 Location: 00_DNA/brand-identity/
-Scope: Faceless content operations, social media, GTI voice
+Scope: Faceless content operations, social media, awareness-phase voice
 Hard Restriction: NO ownership mentions. NO Evolution Stables branding.
                   NO Tokinvest/VARA references. Ever.
 
@@ -41,8 +41,8 @@ channel for Evolution Stables. It educates participation, audits the
 experts, surfaces the data. If someone discovers Evolution Stables later
 through algorithmic osmosis — that is incidental, not designed.
 
-We catch users in the GTI phase: fast, accessible, high-revving,
-democratic. The Q7 (Evolution Stables) comes later when they mature.
+We catch users in the aspirational pre-ownership audience: fast, accessible, high-revving,
+democratic. Evolution Stables comes later when they mature into ownership-ready participants.
 Do not rush the progression. Never break the wall.
 
 ### The Channel Identity
@@ -51,7 +51,7 @@ Public name:  Evolution Intelligence
 Handle:       @EvolutionIntelligence (or market-specific variant)
 Bio:          "Racing intelligence. Data over opinion."
 
-No logo connection to Evolution Stables in GTI contexts.
+No logo connection to Evolution Stables in awareness-phase contexts.
 No "Powered by" or "Part of" references.
 No hashtags linking to Evolution Stables accounts.
 
@@ -82,7 +82,7 @@ We never sell. We educate.
 
 Use these terms exclusively. Non-negotiable.
 
-| GTI Term        | Banned Alternative                         | Usage Example                                              |
+| System Term     | Banned Alternative                         | Usage Example                                              |
 |-----------------|--------------------------------------------|------------------------------------------------------------|
 | Market Liability| Favorite, Favourite, "the fav"             | "The Market Liability at Ellerslie is showing weakness…"  |
 | Volume Delta    | Money coming in, Betting volume, "cash"    | "Volume Delta spiked 400% in the final 10 minutes…"       |
@@ -286,7 +286,7 @@ Execution:
 | Voice model | Eleven Turbo v2                     |
 | Settings    | Stability 0.6, Clarity 0.8, Style 0.4 |
 
-### Color Palette (GTI Layer)
+### Color Palette (Awareness Layer)
 
 | Role              | Hex       | Usage                               |
 |-------------------|-----------|-------------------------------------|
@@ -388,7 +388,7 @@ Before any piece is approved, confirm:
 Full detail in Evolution_OS.md.
 
 Input:    Scout briefs → 01_raw_intake/
-Process:  n8n → Gemini Pro (GTI voice guardrails) → ElevenLabs Kore
+Process:  n8n → Gemini Pro (awareness-phase voice guardrails) → ElevenLabs Kore
 Build:    FFmpeg (captions, B-roll, data overlays, 1080×1920)
 Output:   04_exports/ → Telegram approval → Social APIs
 Cleanup:  Sunday Hygiene SOP (see Evolution_OS.md)
@@ -413,21 +413,3 @@ Next review: When content pillars expand or new markets activate
 Do NOT modify casually. Version changes require header update.
 For platform brand: see Branding.md
 For technical architecture: see Evolution_OS.md
----
-doc_type: brand-voice-gti
-entity: Evolution Intelligence
-last_updated: 2026-02-28
-audience: GTI Phase (aspirational, pre-ownership, racing-curious)
-tags: [brand, gti, faceless, tiktok, intelligence]
----
-
-## What This Is
-Evolution Intelligence is the faceless data channel.
-Audience: people in the GTI phase — racing-curious, not yet ownership-ready.
-They mature into Evolution Stables participants. We do not rush this.
-
-## The Wall — Non-Negotiable
-- NO mention of Evolution Stables
-- NO ownership, syndication, or investment language
-- NO branding links between this channel and Evolution Stables
-- The algorithm makes the connection. We never do.
