@@ -18,6 +18,10 @@
 │   ├── BRAND_SYSTEM.md    (Ownership Layer Canon)
 │   └── INTELLIGENCE_SYSTEM.md (Awareness Layer Canon)
 │
+├── 📁 brand-identity/     (Brand Voice & Identity)
+│   ├── README.md          (Submodule documentation)
+│   └── Brand_Voice_System/ (Git submodule - Brand voice modules)
+│
 ├── 📁 build-philosophy/   (Technical Constitution)
 │   ├── BUILD_SYSTEM.md    (Architecture & Methodology)
 │   ├── MACHINE_CONFIG.md  (Hardware & WSL Standards)
@@ -29,12 +33,17 @@
 │
 ├── 📁 vault/              (Secret Management Standards)
 ├── 📁 scripts/            (Consolidated Utility Hub)
+│   ├── antfarm.sh         (Swarm orchestrator)
+│   └── ...                (Other utility scripts)
 ├── 📁 workflows/          (Core SOPs & Migration)
+│   ├── ANTFARM_BLUEPRINT.md (Multi-agent build system)
+│   └── ...                (Other workflow documents)
 ├── 📁 system-prompts/     (AI Bootstrap Templates)
 ├── 📁 content-strategy/   (Social & Content Pillars)
 ├── 📁 skills/             (Approved Source Registry)
 ├── 📁 _obsidian/          (Human-friendly Navigation)
-└── 📁 _archive/           (Superseded snapshots)
+├── 📁 _archive/           (Superseded snapshots)
+└── 📁 _backups/           (Folder structure backups)
 ```
 
 ---
